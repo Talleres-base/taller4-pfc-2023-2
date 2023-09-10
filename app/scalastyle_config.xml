@@ -1,0 +1,7 @@
+<scalastyle commentFilter="enabled">
+    <name>Scalastyle course functional programming</name>
+    <check enabled="true" class="org.scalastyle.scalariform.ReturnChecker" level="error"/>
+    <check enabled="true" class="org.scalastyle.scalariform.VarFieldChecker" level="error"/>
+    <check enabled="true" class="org.scalastyle.scalariform.VarLocalChecker" level="error"/>
+    <check enabled="true" class="org.scalastyle.scalariform.WhileChecker" level="error"/>
+</scalastyle>
