@@ -6,7 +6,7 @@ Editar clase SizeList metodos TamI y TamIAux para que retornen el tamaño de la 
 
 ## Punto 2 - Dividir listas
 
-Implemente usando recursión, las funciones **menoresQue** y **noMenoresQue**
+Implemente usando recursión, las funciones **menoresQue** y **mayoresQue**
 
 ## Punto 3 - Calculando k-esimo elemento de una lista
 
@@ -15,4 +15,4 @@ Utilice las funciones implementadas en los ejercicios anteriores para implementa
 
 ## Punto 4 - Ordenando listas
 
-Utilice las funciones **menoresQue**, **noMenoresQue** implementadas en un ejercicio anterior para implementar la función **ordenar** que recibe una lista l no vacía de enteros,  y devuelve  la secuencia que representa la lista l ordenada.
+Utilice las funciones **menoresQue**, **mayoresQue** implementadas en un ejercicio anterior para implementar la función **ordenar** que recibe una lista l no vacía de enteros,  y devuelve  la secuencia que representa la lista l ordenada.
