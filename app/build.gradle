@@ -46,5 +46,5 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'taller1.App'
+    mainClass = 'taller2.App'
 }
