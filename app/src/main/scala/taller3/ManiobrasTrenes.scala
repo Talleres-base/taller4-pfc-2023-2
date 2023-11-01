@@ -1,8 +1,9 @@
 /**
  * Clase Maniobrastrenes
  */
-
 package taller3
+
+import scala.annotation.tailrec
 
 class ManiobrasTrenes {
   type Vagon = Any
@@ -18,24 +19,30 @@ class ManiobrasTrenes {
 
     def aplicarMovimiento(e:Estado,m:Movimiento):Estado = {
       (List(),List(),List()) //Borrar
-  }
+    }
   /**
-    * Aplicar movimientos
+    * Aplicar movimientos usando recursión de cola
     * @param e:Estado estado actual
     * @param movs: Lista de movimientos a aplicar
     * @return List[Estado] lista de estados resultantes
     */
-  def aplicarMovimientos(e:Estado,movs:List[Movimiento]):List[Estado] = {
-    List((List(),List(),List())) //Borrar
+  def aplicarMovimientos(e:Estado,movs:Maniobra):List[Estado] = {
+    @tailrec
+    def aplicarMovimientosAux(movs:Maniobra, acc:List[Estado]):List[Estado] = {
+      if (movs.isEmpty) acc
+      else 
+  	  	aplicarMovimientosAux(List(), acc) //Borrar y cambiar (asi esta para que compile)
+  	}
+	  aplicarMovimientosAux(movs, List(e))
   }
   /**
-    * Lista de maniobras para llegar de un tren t1 a un tren t2
+    * Maniobras para llegar de un tren t1 a un tren t2
     * @param t1:Tren tren inicial
     * @param t2:Tren tren final
-    * @return List[Maniobra] lista de maniobras
+    * @return Maniobra lista de movimientos
     */
-  def definirManiobra(t1:Tren,t2:Tren):List[Maniobra] = {
-    List(List()) //Borrar
+  def definirManiobra(t1:Tren,t2:Tren):Maniobra = {
+    List(Uno(0)) //Borrar
   }
 
 

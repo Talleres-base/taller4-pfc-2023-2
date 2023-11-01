@@ -13,7 +13,21 @@ class test3DefinirManiobras extends AnyFunSuite {
     val obj = new ManiobrasTrenes()
     val t1 = List('a','b','c','d')
     val t2 = List('d','b','c','a')
-    val res = obj.definirManiobra(t1,t2)
-    val resA = List(Uno(4),Uno(-3),Dos(3),Uno(-1),Dos(-1),Uno(1),Dos(-1),Uno(-1))
+    val movs = obj.definirManiobra(t1,t2)
+    val ei = (t1,List(),List())
+    val tf = obj.aplicarMovimientos(ei,movs).last //Estado final obtenido
+    val ef = (t2,List(),List()) //Estado final esperado
+    assert(tf == ef)
+  }
+
+  test("Prueba2") {
+    val obj = new ManiobrasTrenes()
+    val t1 = List('a','b','c','d','e','f','g','h','i','j')
+    val t2 = List('j','h','i','g','e','f','d','c','a','b')
+    val movs = obj.definirManiobra(t1,t2)
+    val ei = (t1,List(),List())
+    val tf = obj.aplicarMovimientos(ei,movs).last //Estado final obtenido
+    val ef = (t2,List(),List()) //Estado final esperado
+    assert(tf == ef)
   }
 }
