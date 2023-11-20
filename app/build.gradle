@@ -11,7 +11,6 @@ plugins {
 
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
-
     id("com.github.alisiikh.scalastyle") version "3.5.0"
 
 }
@@ -46,5 +45,5 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'taller3.Taller3'
+    mainClass = 'taller4.taller4'
 }
