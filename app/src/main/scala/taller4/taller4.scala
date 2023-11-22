@@ -3,8 +3,8 @@
   * Autores: <Estudiantes>
   * Profesor: Carlos A Delgado
   */
-package taller3
-object Taller3{
+package taller4
+object taller4{
 
 
   def main(args: Array[String]): Unit = {

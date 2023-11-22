@@ -26,6 +26,8 @@ dependencies {
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:32.1.1-jre'
+    //Scalameter core
+    implementation 'com.storm-enroute:scalameter-core_2.13:0.21'
 
     // Use Scalatest for testing our library
     testImplementation 'junit:junit:4.13.2'
