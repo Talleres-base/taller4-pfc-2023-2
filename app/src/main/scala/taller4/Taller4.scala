@@ -4,10 +4,12 @@
   * Profesor: Carlos A Delgado
   */
 package taller4
-object taller4{
 
+object Taller4{
+
+  def saludo() = "Taller 4 2023-II"
 
   def main(args: Array[String]): Unit = {
-    println("Taller 4 2023-II")
+    println(saludo())
   }
  }
