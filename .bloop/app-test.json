@@ -1,0 +1,920 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "app-test",
+        "directory": "C:\\Users\\ALEJANDRO\\github-classroom\\Programacion-funcional-2023-I\\taller4-pfc-2023-2\\app",
+        "workspaceDir": "C:\\Users\\ALEJANDRO\\github-classroom\\Programacion-funcional-2023-I\\taller4-pfc-2023-2",
+        "sources": [
+            "C:\\Users\\ALEJANDRO\\github-classroom\\Programacion-funcional-2023-I\\taller4-pfc-2023-2\\app\\src\\test\\scala",
+            "C:\\Users\\ALEJANDRO\\github-classroom\\Programacion-funcional-2023-I\\taller4-pfc-2023-2\\app\\src\\test\\java"
+        ],
+        "dependencies": [
+            "app"
+        ],
+        "classpath": [
+            "C:\\Users\\ALEJANDRO\\github-classroom\\Programacion-funcional-2023-I\\taller4-pfc-2023-2\\.bloop\\app\\build\\classes",
+            "C:\\Users\\ALEJANDRO\\github-classroom\\Programacion-funcional-2023-I\\taller4-pfc-2023-2\\app\\src\\main\\resources",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.storm-enroute\\scalameter-core_2.13\\0.21\\d5c61a5563dc8d6059ea1a23f62ae5fc8ceceae6\\scalameter-core_2.13-0.21.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest_2.13\\3.2.16\\a3ecd2cff5693e1d4d1dac57a7dd395daeb54497\\scalatest_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatestplus\\junit-4-13_2.13\\3.2.2.0\\75fd94bb9272ec7023409cb80547ff5ea9bb813d\\junit-4-13_2.13-3.2.2.0.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-collection-compat_2.13\\2.1.1\\2b5b8c8b8756d2ae4fad15692cd23cdab795cb47\\scala-collection-compat_2.13-2.1.1.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parser-combinators_2.13\\1.1.2\\1c591dfd20e117ecd0931de1a7ba12145dc83645\\scala-parser-combinators_2.13-1.1.2.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-featurespec_2.13\\3.2.16\\924f4f029a1bc65c4e3055c6a5e8f8023fb10c2d\\scalatest-featurespec_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-flatspec_2.13\\3.2.16\\21dbf5664cf863f160162c9edc7ffaee7fd0214c\\scalatest-flatspec_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-freespec_2.13\\3.2.16\\342c550d8876ce7b6c92d4c218411b45979bbd5c\\scalatest-freespec_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-funsuite_2.13\\3.2.16\\173666665c4eb2bdd2f6f8fde6287b46f623aa6\\scalatest-funsuite_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-funspec_2.13\\3.2.16\\a9953cfa24cdc52796dd330395c6067efd38909f\\scalatest-funspec_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-propspec_2.13\\3.2.16\\4249658dba75a75239819d129a5d1e290c158c29\\scalatest-propspec_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-refspec_2.13\\3.2.16\\65595306a448b12c0f3e2cbaa3e5fc97ba93c288\\scalatest-refspec_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-wordspec_2.13\\3.2.16\\51384c13194fba18dad0cb6532d52b16057a821c\\scalatest-wordspec_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-diagrams_2.13\\3.2.16\\e8c1c1752044538d08f95a450526b66dd3449a52\\scalatest-diagrams_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-shouldmatchers_2.13\\3.2.16\\d79368696c64470b6201f6c512240e07b322817c\\scalatest-shouldmatchers_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-mustmatchers_2.13\\3.2.16\\4ba506980d82524cd8b0e79ec248efb53c21d117\\scalatest-mustmatchers_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-matchers-core_2.13\\3.2.16\\ba65129f9f78030911cfe4aee77d83eb9aec33ec\\scalatest-matchers-core_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-core_2.13\\3.2.16\\1113f9844dff91e14d2924b16c6a88de25c556d2\\scalatest-core_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalactic\\scalactic_2.13\\3.2.16\\35fb40df95717be72cf1f370113d783e52fb72e3\\scalactic_2.13-3.2.16.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-reflect\\2.13.10\\f19c2a5fc93a63398a5cfc56a14f0abf1d28d27c\\scala-reflect-2.13.10.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.13\\2.1.0\\f2c107c097692b6c07941e7b96fcf6ec3b58add6\\scala-xml_2.13-2.1.0.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-library\\2.13.11\\4fcd82e1ce42d7b157914b86864e7b3591e1e0d2\\scala-library-2.13.11.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\guava\\32.1.1-jre\\ad575652d84153075dd41ec6177ccb15251262b2\\guava-32.1.1-jre.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\junit\\junit\\4.13.2\\8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12\\junit-4.13.2.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\failureaccess\\1.0.1\\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\\failureaccess-1.0.1.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.code.findbugs\\jsr305\\3.0.2\\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\\jsr305-3.0.2.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.checkerframework\\checker-qual\\3.33.0\\de2b60b62da487644fc11f734e73c8b0b431238f\\checker-qual-3.33.0.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.errorprone\\error_prone_annotations\\2.18.0\\89b684257096f548fa39a7df9fdaa409d4d4df91\\error_prone_annotations-2.18.0.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.j2objc\\j2objc-annotations\\2.8\\c85270e307e7b822f1086b93689124b89768e273\\j2objc-annotations-2.8.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\io.github.classgraph\\classgraph\\4.8.78\\87ced5cc1843e8c1736d9abc4a481e75558edddb\\classgraph-4.8.78.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-math3\\3.2\\ec2544ab27e110d2d431bdad7d538ed509b21e62\\commons-math3-3.2.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-lang3\\3.4\\5fe28b9518e58819180a43a850fbc0dd24b7c050\\commons-lang3-3.4.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.ow2.asm\\asm\\5.0.4\\da08b8cce7bbf903602a25a3a163ae252435795\\asm-5.0.4.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jline\\jline\\3.10.0\\5a1cf6bd0d3967ec99b2b63cfc3e1987c911b3df\\jline-3.10.0.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.hamcrest\\hamcrest-core\\1.3\\42a25dc3219429f0e5d060061f71acb49bf010a0\\hamcrest-core-1.3.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-compatible\\3.2.16\\2fa93bd0612e180c6af6a5a6f97fd5b6f44feb87\\scalatest-compatible-3.2.16.jar"
+        ],
+        "out": "C:\\Users\\ALEJANDRO\\github-classroom\\Programacion-funcional-2023-I\\taller4-pfc-2023-2\\.bloop\\app-test\\build",
+        "classesDir": "C:\\Users\\ALEJANDRO\\github-classroom\\Programacion-funcional-2023-I\\taller4-pfc-2023-2\\.bloop\\app-test\\build\\classes",
+        "resources": [
+            "C:\\Users\\ALEJANDRO\\github-classroom\\Programacion-funcional-2023-I\\taller4-pfc-2023-2\\app\\src\\test\\resources"
+        ],
+        "scala": {
+            "organization": "org.scala-lang",
+            "name": "scala-compiler",
+            "version": "2.13.11",
+            "options": [
+                "-deprecation",
+                "-unchecked"
+            ],
+            "jars": [
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-compiler\\2.13.11\\30e53c6936843f6f470617b6256383171048efde\\scala-compiler-2.13.11.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-sbt\\compiler-bridge_2.13\\1.6.1\\15798fdc2d9dca8962ba3c14ae8deaf34eca2213\\compiler-bridge_2.13-1.6.1-sources.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-sbt\\compiler-interface\\1.6.1\\fa68930e1686c5d251a025ae656fa1e5f0af53fc\\compiler-interface-1.6.1.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-reflect\\2.13.11\\965b382f32d914716b0c6a8d05956a3600a7b35a\\scala-reflect-2.13.11.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-library\\2.13.11\\4fcd82e1ce42d7b157914b86864e7b3591e1e0d2\\scala-library-2.13.11.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\io.github.java-diff-utils\\java-diff-utils\\4.12\\1a712a91324d566eef39817fc5c9980eb10c21db\\java-diff-utils-4.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jline\\jline\\3.22.0\\512dde71f1ba9cb87f318e4e1e3acc77dc67a712\\jline-3.22.0.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\net.java.dev.jna\\jna\\5.13.0\\1200e7ebeedbe0d10062093f32925a912020e747\\jna-5.13.0.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-sbt\\util-interface\\1.6.1\\b6280fa8056b59788d04084994fcf5ee9f1ca9f0\\util-interface-1.6.1.jar"
+            ],
+            "setup": {
+                "order": "java->scala",
+                "addLibraryToBootClasspath": true,
+                "addCompilerToClasspath": false,
+                "addExtraJarsToClasspath": false,
+                "manageBootClasspath": true,
+                "filterLibraryFromClasspath": true
+            }
+        },
+        "java": {
+            "options": [
+                "-source",
+                "17",
+                "-target",
+                "17",
+                "-h",
+                "C:\\Users\\ALEJANDRO\\github-classroom\\Programacion-funcional-2023-I\\taller4-pfc-2023-2\\app\\build\\generated\\sources\\headers\\java\\test",
+                "-g",
+                "-sourcepath",
+                "",
+                "-proc:none",
+                "-XDuseUnsharedTable=true"
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework",
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "utest.runner.Framework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    {
+                        "args": [
+                            "-v",
+                            "-a"
+                        ],
+                        "framework": {
+                            "names": [
+                                "com.novocode.junit.JUnitFramework"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "C:\\Program Files\\Java\\jdk-17",
+                "options": [
+                    
+                ]
+            },
+            "mainClass": [
+                
+            ],
+            "classpath": [
+                "C:\\Users\\ALEJANDRO\\github-classroom\\Programacion-funcional-2023-I\\taller4-pfc-2023-2\\.bloop\\app\\build\\classes",
+                "C:\\Users\\ALEJANDRO\\github-classroom\\Programacion-funcional-2023-I\\taller4-pfc-2023-2\\app\\src\\main\\resources",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.storm-enroute\\scalameter-core_2.13\\0.21\\d5c61a5563dc8d6059ea1a23f62ae5fc8ceceae6\\scalameter-core_2.13-0.21.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest_2.13\\3.2.16\\a3ecd2cff5693e1d4d1dac57a7dd395daeb54497\\scalatest_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatestplus\\junit-4-13_2.13\\3.2.2.0\\75fd94bb9272ec7023409cb80547ff5ea9bb813d\\junit-4-13_2.13-3.2.2.0.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-collection-compat_2.13\\2.1.1\\2b5b8c8b8756d2ae4fad15692cd23cdab795cb47\\scala-collection-compat_2.13-2.1.1.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parser-combinators_2.13\\1.1.2\\1c591dfd20e117ecd0931de1a7ba12145dc83645\\scala-parser-combinators_2.13-1.1.2.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-featurespec_2.13\\3.2.16\\924f4f029a1bc65c4e3055c6a5e8f8023fb10c2d\\scalatest-featurespec_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-flatspec_2.13\\3.2.16\\21dbf5664cf863f160162c9edc7ffaee7fd0214c\\scalatest-flatspec_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-freespec_2.13\\3.2.16\\342c550d8876ce7b6c92d4c218411b45979bbd5c\\scalatest-freespec_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-funsuite_2.13\\3.2.16\\173666665c4eb2bdd2f6f8fde6287b46f623aa6\\scalatest-funsuite_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-funspec_2.13\\3.2.16\\a9953cfa24cdc52796dd330395c6067efd38909f\\scalatest-funspec_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-propspec_2.13\\3.2.16\\4249658dba75a75239819d129a5d1e290c158c29\\scalatest-propspec_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-refspec_2.13\\3.2.16\\65595306a448b12c0f3e2cbaa3e5fc97ba93c288\\scalatest-refspec_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-wordspec_2.13\\3.2.16\\51384c13194fba18dad0cb6532d52b16057a821c\\scalatest-wordspec_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-diagrams_2.13\\3.2.16\\e8c1c1752044538d08f95a450526b66dd3449a52\\scalatest-diagrams_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-shouldmatchers_2.13\\3.2.16\\d79368696c64470b6201f6c512240e07b322817c\\scalatest-shouldmatchers_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-mustmatchers_2.13\\3.2.16\\4ba506980d82524cd8b0e79ec248efb53c21d117\\scalatest-mustmatchers_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-matchers-core_2.13\\3.2.16\\ba65129f9f78030911cfe4aee77d83eb9aec33ec\\scalatest-matchers-core_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-core_2.13\\3.2.16\\1113f9844dff91e14d2924b16c6a88de25c556d2\\scalatest-core_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalactic\\scalactic_2.13\\3.2.16\\35fb40df95717be72cf1f370113d783e52fb72e3\\scalactic_2.13-3.2.16.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-reflect\\2.13.10\\f19c2a5fc93a63398a5cfc56a14f0abf1d28d27c\\scala-reflect-2.13.10.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.13\\2.1.0\\f2c107c097692b6c07941e7b96fcf6ec3b58add6\\scala-xml_2.13-2.1.0.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-library\\2.13.11\\4fcd82e1ce42d7b157914b86864e7b3591e1e0d2\\scala-library-2.13.11.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\guava\\32.1.1-jre\\ad575652d84153075dd41ec6177ccb15251262b2\\guava-32.1.1-jre.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\junit\\junit\\4.13.2\\8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12\\junit-4.13.2.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\failureaccess\\1.0.1\\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\\failureaccess-1.0.1.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.code.findbugs\\jsr305\\3.0.2\\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\\jsr305-3.0.2.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.checkerframework\\checker-qual\\3.33.0\\de2b60b62da487644fc11f734e73c8b0b431238f\\checker-qual-3.33.0.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.errorprone\\error_prone_annotations\\2.18.0\\89b684257096f548fa39a7df9fdaa409d4d4df91\\error_prone_annotations-2.18.0.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\io.github.classgraph\\classgraph\\4.8.78\\87ced5cc1843e8c1736d9abc4a481e75558edddb\\classgraph-4.8.78.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-math3\\3.2\\ec2544ab27e110d2d431bdad7d538ed509b21e62\\commons-math3-3.2.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-lang3\\3.4\\5fe28b9518e58819180a43a850fbc0dd24b7c050\\commons-lang3-3.4.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.ow2.asm\\asm\\5.0.4\\da08b8cce7bbf903602a25a3a163ae252435795\\asm-5.0.4.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jline\\jline\\3.10.0\\5a1cf6bd0d3967ec99b2b63cfc3e1987c911b3df\\jline-3.10.0.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.hamcrest\\hamcrest-core\\1.3\\42a25dc3219429f0e5d060061f71acb49bf010a0\\hamcrest-core-1.3.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-compatible\\3.2.16\\2fa93bd0612e180c6af6a5a6f97fd5b6f44feb87\\scalatest-compatible-3.2.16.jar"
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.apache.commons",
+                    "name": "commons-lang3",
+                    "version": "3.4",
+                    "artifacts": [
+                        {
+                            "name": "commons-lang3",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-lang3\\3.4\\5fe28b9518e58819180a43a850fbc0dd24b7c050\\commons-lang3-3.4.jar"
+                        },
+                        {
+                            "name": "commons-lang3",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-lang3\\3.4\\b49dafc9cfef24c356827f322e773e7c26725dd2\\commons-lang3-3.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-core_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-core_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-core_2.13\\3.2.16\\99b5a43f2a79b6ebbf3f2fdcd6ce17b6f9e34ba1\\scalatest-core_2.13-3.2.16-sources.jar"
+                        },
+                        {
+                            "name": "scalatest-core_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-core_2.13\\3.2.16\\1113f9844dff91e14d2924b16c6a88de25c556d2\\scalatest-core_2.13-3.2.16.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-compatible",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-compatible",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-compatible\\3.2.16\\f1ca35e9c08cf262f873cac476e409d952c2297b\\scalatest-compatible-3.2.16-sources.jar"
+                        },
+                        {
+                            "name": "scalatest-compatible",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-compatible\\3.2.16\\2fa93bd0612e180c6af6a5a6f97fd5b6f44feb87\\scalatest-compatible-3.2.16.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-funspec_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-funspec_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-funspec_2.13\\3.2.16\\ded152a76959f5035faa5be1ac81d806a8a6d956\\scalatest-funspec_2.13-3.2.16-sources.jar"
+                        },
+                        {
+                            "name": "scalatest-funspec_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-funspec_2.13\\3.2.16\\a9953cfa24cdc52796dd330395c6067efd38909f\\scalatest-funspec_2.13-3.2.16.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.13.11",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-library\\2.13.11\\4fcd82e1ce42d7b157914b86864e7b3591e1e0d2\\scala-library-2.13.11.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-library\\2.13.11\\f1b135608059938f48ec63cae04391329cf1ee1d\\scala-library-2.13.11-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest_2.13\\3.2.16\\96580fdcf4a097ef032007e7654a2236b18beb0f\\scalatest_2.13-3.2.16-sources.jar"
+                        },
+                        {
+                            "name": "scalatest_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest_2.13\\3.2.16\\a3ecd2cff5693e1d4d1dac57a7dd395daeb54497\\scalatest_2.13-3.2.16.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-wordspec_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-wordspec_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-wordspec_2.13\\3.2.16\\51384c13194fba18dad0cb6532d52b16057a821c\\scalatest-wordspec_2.13-3.2.16.jar"
+                        },
+                        {
+                            "name": "scalatest-wordspec_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-wordspec_2.13\\3.2.16\\62eccef7e0ddb2d118a49a8f6d1bbfe98bb26159\\scalatest-wordspec_2.13-3.2.16-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-collection-compat_2.13",
+                    "version": "2.1.1",
+                    "artifacts": [
+                        {
+                            "name": "scala-collection-compat_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-collection-compat_2.13\\2.1.1\\d51c90f546ee6936c77b9e3ea2f3a8a6b2df7015\\scala-collection-compat_2.13-2.1.1-sources.jar"
+                        },
+                        {
+                            "name": "scala-collection-compat_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-collection-compat_2.13\\2.1.1\\2b5b8c8b8756d2ae4fad15692cd23cdab795cb47\\scala-collection-compat_2.13-2.1.1.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-parser-combinators_2.13",
+                    "version": "1.1.2",
+                    "artifacts": [
+                        {
+                            "name": "scala-parser-combinators_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parser-combinators_2.13\\1.1.2\\3c11f3bb6efdaf7ab83874f139e9d755215dd3b1\\scala-parser-combinators_2.13-1.1.2-sources.jar"
+                        },
+                        {
+                            "name": "scala-parser-combinators_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parser-combinators_2.13\\1.1.2\\1c591dfd20e117ecd0931de1a7ba12145dc83645\\scala-parser-combinators_2.13-1.1.2.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatestplus",
+                    "name": "junit-4-13_2.13",
+                    "version": "3.2.2.0",
+                    "artifacts": [
+                        {
+                            "name": "junit-4-13_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatestplus\\junit-4-13_2.13\\3.2.2.0\\75fd94bb9272ec7023409cb80547ff5ea9bb813d\\junit-4-13_2.13-3.2.2.0.jar"
+                        },
+                        {
+                            "name": "junit-4-13_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatestplus\\junit-4-13_2.13\\3.2.2.0\\d667a1de3e392682978823404573b7a28cdaf215\\junit-4-13_2.13-3.2.2.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.jline",
+                    "name": "jline",
+                    "version": "3.10.0",
+                    "artifacts": [
+                        {
+                            "name": "jline",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jline\\jline\\3.10.0\\e3327aabdd34fd8f0b8f2cf489336732cea7eda8\\jline-3.10.0-sources.jar"
+                        },
+                        {
+                            "name": "jline",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jline\\jline\\3.10.0\\5a1cf6bd0d3967ec99b2b63cfc3e1987c911b3df\\jline-3.10.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-xml_2.12",
+                    "version": "1.2.0",
+                    "artifacts": [
+                        {
+                            "name": "scala-xml_2.12",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.12\\1.2.0\\5d38ac30beb8420dd395c0af447ba412158965e6\\scala-xml_2.12-1.2.0.jar"
+                        },
+                        {
+                            "name": "scala-xml_2.12",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.12\\1.2.0\\97b3021c2ceef1170ff2f0e8a12a1cb5dfc9bfd3\\scala-xml_2.12-1.2.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.beautiful-scala",
+                    "name": "scalastyle_2.12",
+                    "version": "1.2.0",
+                    "artifacts": [
+                        {
+                            "name": "scalastyle_2.12",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.beautiful-scala\\scalastyle_2.12\\1.2.0\\69a99f084ffeed9af57301651afc64098a9834a3\\scalastyle_2.12-1.2.0-sources.jar"
+                        },
+                        {
+                            "name": "scalastyle_2.12",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.beautiful-scala\\scalastyle_2.12\\1.2.0\\662428064dd23bf9bb688a58eca4c5208661fee\\scalastyle_2.12-1.2.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-freespec_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-freespec_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-freespec_2.13\\3.2.16\\865ae1f96a5ee7dbb8905e7d82ab72aff069064f\\scalatest-freespec_2.13-3.2.16-sources.jar"
+                        },
+                        {
+                            "name": "scalatest-freespec_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-freespec_2.13\\3.2.16\\342c550d8876ce7b6c92d4c218411b45979bbd5c\\scalatest-freespec_2.13-3.2.16.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalariform",
+                    "name": "scalariform_2.12",
+                    "version": "0.2.10",
+                    "artifacts": [
+                        {
+                            "name": "scalariform_2.12",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalariform\\scalariform_2.12\\0.2.10\\26f871b0701ec7476823cc3aef817316955d3bca\\scalariform_2.12-0.2.10.jar"
+                        },
+                        {
+                            "name": "scalariform_2.12",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalariform\\scalariform_2.12\\0.2.10\\85a157f52179d317d652cc7b6130b6eb708c60a1\\scalariform_2.12-0.2.10-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-flatspec_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-flatspec_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-flatspec_2.13\\3.2.16\\21dbf5664cf863f160162c9edc7ffaee7fd0214c\\scalatest-flatspec_2.13-3.2.16.jar"
+                        },
+                        {
+                            "name": "scalatest-flatspec_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-flatspec_2.13\\3.2.16\\53935d7db197e4950c8e3ccd113e08c34935828\\scalatest-flatspec_2.13-3.2.16-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.storm-enroute",
+                    "name": "scalameter-core_2.13",
+                    "version": "0.21",
+                    "artifacts": [
+                        {
+                            "name": "scalameter-core_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.storm-enroute\\scalameter-core_2.13\\0.21\\cb85cbd121defc591dc0eb664f18f605247c7ee0\\scalameter-core_2.13-0.21-sources.jar"
+                        },
+                        {
+                            "name": "scalameter-core_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.storm-enroute\\scalameter-core_2.13\\0.21\\d5c61a5563dc8d6059ea1a23f62ae5fc8ceceae6\\scalameter-core_2.13-0.21.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-reflect",
+                    "version": "2.13.10",
+                    "artifacts": [
+                        {
+                            "name": "scala-reflect",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-reflect\\2.13.10\\5df79e6c2f21a25172ed2ecc3c83f4703ad50061\\scala-reflect-2.13.10-sources.jar"
+                        },
+                        {
+                            "name": "scala-reflect",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-reflect\\2.13.10\\f19c2a5fc93a63398a5cfc56a14f0abf1d28d27c\\scala-reflect-2.13.10.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.checkerframework",
+                    "name": "checker-qual",
+                    "version": "3.33.0",
+                    "artifacts": [
+                        {
+                            "name": "checker-qual",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.checkerframework\\checker-qual\\3.33.0\\ee4ecf6c55e3f2b05b839aa05c70f1298437ebe9\\checker-qual-3.33.0-sources.jar"
+                        },
+                        {
+                            "name": "checker-qual",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.checkerframework\\checker-qual\\3.33.0\\de2b60b62da487644fc11f734e73c8b0b431238f\\checker-qual-3.33.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-mustmatchers_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-mustmatchers_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-mustmatchers_2.13\\3.2.16\\b3148e20018c71d7295cdc7420e86240e6ce1819\\scalatest-mustmatchers_2.13-3.2.16-sources.jar"
+                        },
+                        {
+                            "name": "scalatest-mustmatchers_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-mustmatchers_2.13\\3.2.16\\4ba506980d82524cd8b0e79ec248efb53c21d117\\scalatest-mustmatchers_2.13-3.2.16.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-refspec_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-refspec_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-refspec_2.13\\3.2.16\\65595306a448b12c0f3e2cbaa3e5fc97ba93c288\\scalatest-refspec_2.13-3.2.16.jar"
+                        },
+                        {
+                            "name": "scalatest-refspec_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-refspec_2.13\\3.2.16\\49c9cb1daa5489370dd456da02b2a0cb884e2e8a\\scalatest-refspec_2.13-3.2.16-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.12.10",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-library\\2.12.10\\3509860bc2e5b3da001ed45aca94ffbe5694dbda\\scala-library-2.12.10.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-library\\2.12.10\\686bb459f3026f14165373324d943a4cac6959c2\\scala-library-2.12.10-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.code.findbugs",
+                    "name": "jsr305",
+                    "version": "3.0.2",
+                    "artifacts": [
+                        {
+                            "name": "jsr305",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.code.findbugs\\jsr305\\3.0.2\\b19b5927c2c25b6c70f093767041e641ae0b1b35\\jsr305-3.0.2-sources.jar"
+                        },
+                        {
+                            "name": "jsr305",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.code.findbugs\\jsr305\\3.0.2\\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\\jsr305-3.0.2.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.github.classgraph",
+                    "name": "classgraph",
+                    "version": "4.8.78",
+                    "artifacts": [
+                        {
+                            "name": "classgraph",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\io.github.classgraph\\classgraph\\4.8.78\\87ced5cc1843e8c1736d9abc4a481e75558edddb\\classgraph-4.8.78.jar"
+                        },
+                        {
+                            "name": "classgraph",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\io.github.classgraph\\classgraph\\4.8.78\\6f434d8d9a59dd004099ee2daa6d374834361e9f\\classgraph-4.8.78-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-xml_2.13",
+                    "version": "2.1.0",
+                    "artifacts": [
+                        {
+                            "name": "scala-xml_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.13\\2.1.0\\fd264db1c7415552a8d2cb28ec65bcc922fc298\\scala-xml_2.13-2.1.0-sources.jar"
+                        },
+                        {
+                            "name": "scala-xml_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.13\\2.1.0\\f2c107c097692b6c07941e7b96fcf6ec3b58add6\\scala-xml_2.13-2.1.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.j2objc",
+                    "name": "j2objc-annotations",
+                    "version": "2.8",
+                    "artifacts": [
+                        {
+                            "name": "j2objc-annotations",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.j2objc\\j2objc-annotations\\2.8\\74fb66e276fc42784d884d51f841e35232bc90de\\j2objc-annotations-2.8-sources.jar"
+                        },
+                        {
+                            "name": "j2objc-annotations",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.j2objc\\j2objc-annotations\\2.8\\c85270e307e7b822f1086b93689124b89768e273\\j2objc-annotations-2.8.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "junit",
+                    "name": "junit",
+                    "version": "4.13.2",
+                    "artifacts": [
+                        {
+                            "name": "junit",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\junit\\junit\\4.13.2\\8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12\\junit-4.13.2.jar"
+                        },
+                        {
+                            "name": "junit",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\junit\\junit\\4.13.2\\33987872a811fe4d4001ed494b07854822257f42\\junit-4.13.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-matchers-core_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-matchers-core_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-matchers-core_2.13\\3.2.16\\ba65129f9f78030911cfe4aee77d83eb9aec33ec\\scalatest-matchers-core_2.13-3.2.16.jar"
+                        },
+                        {
+                            "name": "scalatest-matchers-core_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-matchers-core_2.13\\3.2.16\\9f918ec3a813897712eb4e880da94839a8661bff\\scalatest-matchers-core_2.13-3.2.16-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-funsuite_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-funsuite_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-funsuite_2.13\\3.2.16\\173666665c4eb2bdd2f6f8fde6287b46f623aa6\\scalatest-funsuite_2.13-3.2.16.jar"
+                        },
+                        {
+                            "name": "scalatest-funsuite_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-funsuite_2.13\\3.2.16\\adebbab1edb1d72cba748352396aea156b428f29\\scalatest-funsuite_2.13-3.2.16-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.guava",
+                    "name": "guava",
+                    "version": "32.1.1-jre",
+                    "artifacts": [
+                        {
+                            "name": "guava",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\guava\\32.1.1-jre\\daf195f3635fc515dc56d8e65c2b6a7bc706458f\\guava-32.1.1-jre-sources.jar"
+                        },
+                        {
+                            "name": "guava",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\guava\\32.1.1-jre\\ad575652d84153075dd41ec6177ccb15251262b2\\guava-32.1.1-jre.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-propspec_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-propspec_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-propspec_2.13\\3.2.16\\4249658dba75a75239819d129a5d1e290c158c29\\scalatest-propspec_2.13-3.2.16.jar"
+                        },
+                        {
+                            "name": "scalatest-propspec_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-propspec_2.13\\3.2.16\\a8a7a6c56657285c43e5505506122594c147925a\\scalatest-propspec_2.13-3.2.16-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-shouldmatchers_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-shouldmatchers_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-shouldmatchers_2.13\\3.2.16\\f1e0b7b149222a365b6ee1e32df3f9c0257985c7\\scalatest-shouldmatchers_2.13-3.2.16-sources.jar"
+                        },
+                        {
+                            "name": "scalatest-shouldmatchers_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-shouldmatchers_2.13\\3.2.16\\d79368696c64470b6201f6c512240e07b322817c\\scalatest-shouldmatchers_2.13-3.2.16.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-xml_2.13",
+                    "version": "1.2.0",
+                    "artifacts": [
+                        {
+                            "name": "scala-xml_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.13\\1.2.0\\f6abd60d28c189f05183b26c5363713d1d126b83\\scala-xml_2.13-1.2.0.jar"
+                        },
+                        {
+                            "name": "scala-xml_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.13\\1.2.0\\7a7c99769f3823091a150378f37a1d7b7ed73055\\scala-xml_2.13-1.2.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.ow2.asm",
+                    "name": "asm",
+                    "version": "5.0.4",
+                    "artifacts": [
+                        {
+                            "name": "asm",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.ow2.asm\\asm\\5.0.4\\da08b8cce7bbf903602a25a3a163ae252435795\\asm-5.0.4.jar"
+                        },
+                        {
+                            "name": "asm",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.ow2.asm\\asm\\5.0.4\\112ff54474f1f04ccf1384c92e39fdc566f0bb5e\\asm-5.0.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.hamcrest",
+                    "name": "hamcrest-core",
+                    "version": "1.3",
+                    "artifacts": [
+                        {
+                            "name": "hamcrest-core",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.hamcrest\\hamcrest-core\\1.3\\42a25dc3219429f0e5d060061f71acb49bf010a0\\hamcrest-core-1.3.jar"
+                        },
+                        {
+                            "name": "hamcrest-core",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.hamcrest\\hamcrest-core\\1.3\\1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b\\hamcrest-core-1.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.guava",
+                    "name": "failureaccess",
+                    "version": "1.0.1",
+                    "artifacts": [
+                        {
+                            "name": "failureaccess",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\failureaccess\\1.0.1\\1d064e61aad6c51cc77f9b59dc2cccc78e792f5a\\failureaccess-1.0.1-sources.jar"
+                        },
+                        {
+                            "name": "failureaccess",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\failureaccess\\1.0.1\\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\\failureaccess-1.0.1.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.commons",
+                    "name": "commons-math3",
+                    "version": "3.2",
+                    "artifacts": [
+                        {
+                            "name": "commons-math3",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-math3\\3.2\\ec2544ab27e110d2d431bdad7d538ed509b21e62\\commons-math3-3.2.jar"
+                        },
+                        {
+                            "name": "commons-math3",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-math3\\3.2\\cd098e055bf192a60c81d81893893e6e31a6482f\\commons-math3-3.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.typesafe",
+                    "name": "config",
+                    "version": "1.4.0",
+                    "artifacts": [
+                        {
+                            "name": "config",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.typesafe\\config\\1.4.0\\e748b8348e1910b0935bf662e21e748290229e7f\\config-1.4.0-sources.jar"
+                        },
+                        {
+                            "name": "config",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.typesafe\\config\\1.4.0\\a8b341fe81552834edc231193afd6f56a96f0eff\\config-1.4.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-diagrams_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-diagrams_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-diagrams_2.13\\3.2.16\\e8c1c1752044538d08f95a450526b66dd3449a52\\scalatest-diagrams_2.13-3.2.16.jar"
+                        },
+                        {
+                            "name": "scalatest-diagrams_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-diagrams_2.13\\3.2.16\\da3241c698291adaac1903eea9bc597b55765946\\scalatest-diagrams_2.13-3.2.16-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.errorprone",
+                    "name": "error_prone_annotations",
+                    "version": "2.18.0",
+                    "artifacts": [
+                        {
+                            "name": "error_prone_annotations",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.errorprone\\error_prone_annotations\\2.18.0\\8781f46ef842929cf22e83273ef0d2091b96845f\\error_prone_annotations-2.18.0-sources.jar"
+                        },
+                        {
+                            "name": "error_prone_annotations",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.errorprone\\error_prone_annotations\\2.18.0\\89b684257096f548fa39a7df9fdaa409d4d4df91\\error_prone_annotations-2.18.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-collection-compat_2.12",
+                    "version": "2.1.4",
+                    "artifacts": [
+                        {
+                            "name": "scala-collection-compat_2.12",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-collection-compat_2.12\\2.1.4\\5e30f17a3653f475e8c046c071c1c3559122dfb8\\scala-collection-compat_2.12-2.1.4.jar"
+                        },
+                        {
+                            "name": "scala-collection-compat_2.12",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-collection-compat_2.12\\2.1.4\\ae0e0ffebfc9309a549d76712db78a3b3669fd77\\scala-collection-compat_2.12-2.1.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-parser-combinators_2.12",
+                    "version": "1.1.2",
+                    "artifacts": [
+                        {
+                            "name": "scala-parser-combinators_2.12",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parser-combinators_2.12\\1.1.2\\2ad65ccbeed662b51e2b96221cb4e7d7d6b7b87a\\scala-parser-combinators_2.12-1.1.2.jar"
+                        },
+                        {
+                            "name": "scala-parser-combinators_2.12",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parser-combinators_2.12\\1.1.2\\17be9d543fa1f7f01d57722cc37d0c4024a15f69\\scala-parser-combinators_2.12-1.1.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalactic",
+                    "name": "scalactic_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalactic_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalactic\\scalactic_2.13\\3.2.16\\208b8d75ca95852459c1adde6d29371e2cd912d2\\scalactic_2.13-3.2.16-sources.jar"
+                        },
+                        {
+                            "name": "scalactic_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalactic\\scalactic_2.13\\3.2.16\\35fb40df95717be72cf1f370113d783e52fb72e3\\scalactic_2.13-3.2.16.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scalatest",
+                    "name": "scalatest-featurespec_2.13",
+                    "version": "3.2.16",
+                    "artifacts": [
+                        {
+                            "name": "scalatest-featurespec_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-featurespec_2.13\\3.2.16\\69292dbbd6aa7d8010118b3f4952c6ba3ff1c49d\\scalatest-featurespec_2.13-3.2.16-sources.jar"
+                        },
+                        {
+                            "name": "scalatest-featurespec_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-featurespec_2.13\\3.2.16\\924f4f029a1bc65c4e3055c6a5e8f8023fb10c2d\\scalatest-featurespec_2.13-3.2.16.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "test"
+        ]
+    }
+}
