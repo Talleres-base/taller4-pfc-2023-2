@@ -48,4 +48,46 @@ def multMatriz(m1: Matriz, m2: Matriz): Matriz = {
     val sub = Vector.tabulate(l/l, l/l)((is, js) => m(i)(j))
     sub
   }
+
+  def multMatrizRec (m1:Matriz , m2: Matriz ) : Matriz ={
+
+    def auxSumaVectorMatriz(matriz: Matriz, posicion: Int, acumuladorSuma : Vector[Vector[Int]]): Vector[Int]={
+      if (posicion == matriz.length) {acumuladorSuma(0)}
+      else{
+        val suma = sumMatriz(subMatriz(matriz,(posicion),0,matriz.length),acumuladorSuma.appended(Vector(0)))
+        auxSumaVectorMatriz(matriz,posicion+1,suma)
+      }
+    }
+
+    def modificarVector(vector:Vector[Int], posicion:Int,tamanio:Int, acumulador:Vector[Vector[Int]]) :Matriz={
+      if (posicion == tamanio) {acumulador}
+      else{
+        val nuevoVector = acumulador:+Vector(vector(posicion))
+        modificarVector(vector,posicion+1,tamanio,nuevoVector)
+      }
+    }
+
+    def auxMultMatrizRec (m1:Matriz , m2: Matriz,auxMatriz: Matriz, tamanio : Int,posicionQuieta:Int,posicionCambiante:Int,auxVector: Vector[Int] ) : Matriz ={
+     if (auxMatriz.length == m1.length ) {auxMatriz}
+     else{
+      val vectorSuma = Vector.tabulate(tamanio)((i) => prodPunto(subMatriz(m1,posicionQuieta,i,m1.length)(0), transpuesta(subMatriz(m2,i,posicionCambiante,m2.length))(0)))
+      val nuevoVector= modificarVector(vectorSuma,0,vectorSuma.length,Vector())
+      val aux2 = auxVector ++ auxSumaVectorMatriz(nuevoVector,0,Vector())
+      
+      if(aux2.length == tamanio){
+        val nuevaMatriz = auxMatriz:+aux2
+        auxMultMatrizRec(m1,m2,nuevaMatriz,tamanio,posicionQuieta+1,0,Vector())
+
+      }else{
+        if (posicionCambiante == tamanio-1) {auxMultMatrizRec(m1,m2,auxMatriz,tamanio,posicionQuieta+1,0,aux2)}
+      else{ auxMultMatrizRec(m1,m2,auxMatriz,tamanio,posicionQuieta,posicionCambiante+1,aux2)}
+      
+      } 
+    }
+    }
+    val matriz: Matriz= Vector()
+
+    auxMultMatrizRec(m1,m2,matriz,m1.length,0,0,Vector())
+  }
 }
+
