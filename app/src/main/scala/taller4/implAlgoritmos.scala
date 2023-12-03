@@ -89,5 +89,51 @@ def multMatriz(m1: Matriz, m2: Matriz): Matriz = {
 
     auxMultMatrizRec(m1,m2,matriz,m1.length,0,0,Vector())
   }
+
+   def strassen(A: Matriz, B: Matriz): Matriz = {
+    if (A.length == 1) {
+      Vector(Vector(A(0)(0) * B(0)(0)))
+    } else {
+
+      val newSize = A.length
+
+      //Divide las matrices en 4 bloques
+      val mid = newSize / 2
+      val A11 = A.slice(0, mid).map(_.slice(0, mid))
+      val A12 = A.slice(0, mid).map(_.slice(mid, newSize))
+      val A21 = A.slice(mid, newSize).map(_.slice(0, mid))
+      val A22 = A.slice(mid, newSize).map(_.slice(mid, newSize))
+
+      val B11 = B.slice(0, mid).map(_.slice(0, mid))
+      val B12 = B.slice(0, mid).map(_.slice(mid, newSize))
+      val B21 = B.slice(mid, newSize).map(_.slice(0, mid))
+      val B22 = B.slice(mid, newSize).map(_.slice(mid, newSize))
+
+
+      val P1 = strassen(A11, restaMatriz(B12, B22))
+      val P2 = strassen(sumMatriz(A11, A12), B22)
+      val P3 = strassen(sumMatriz(A21,A22), B11)
+      val P4 = strassen(A22, restaMatriz(B21, B11))
+      val P5 = strassen(sumMatriz(A11, A22), sumMatriz(B11,B22))
+      val P6 = strassen(restaMatriz(A12, A22), sumMatriz(B21, B22))
+      val P7 = strassen(restaMatriz(A11, A21), sumMatriz(B11, B12))
+
+
+      val C11 = sumMatriz(sumMatriz(P5, P4), restaMatriz(P6, P2))
+      val C12 = sumMatriz(P1, P2)
+      val C21 = sumMatriz(P3, P4)
+      val C22 = restaMatriz(sumMatriz(P5, P1), sumMatriz(P7, P3))
+
+    val result: Matriz = Vector.tabulate(newSize) { i =>
+      if (i < mid) {
+        Vector.concat(C11(i), C12(i))
+      } else {
+        Vector.concat(C21(i - mid), C22(i - mid))
+      }
+    }
+      result
+    }
+  }
+
 }
 
