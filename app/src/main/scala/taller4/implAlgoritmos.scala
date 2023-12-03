@@ -3,7 +3,7 @@ import org.scalameter.measure
 import org.scalameter.withWarmer
 import org.scalameter.Warmer
 import scala.util.Random
-
+import common._
 class implAlgoritmos {     
     type Matriz = Vector [ Vector [ Int ] ]
 
@@ -46,6 +46,11 @@ def multMatriz(m1: Matriz, m2: Matriz): Matriz = {
   }
    def subMatriz (m:Matriz , i: Int , j : Int , l : Int ) : Matriz ={
     val sub = Vector.tabulate(l/l, l/l)((is, js) => m(i)(j))
+    sub
+  }
+
+  def subMatriz2(m: Matriz, filaFrom: Int, filaTo: Int, columnaFrom: Int,columnaTo: Int): Matriz = {
+    val sub = m.slice(filaFrom, filaTo).map(_.slice(columnaFrom, columnaTo))
     sub
   }
 
@@ -98,16 +103,16 @@ def multMatriz(m1: Matriz, m2: Matriz): Matriz = {
       val newSize = A.length
 
       //Divide las matrices en 4 bloques
-      val mid = newSize / 2
-      val A11 = A.slice(0, mid).map(_.slice(0, mid))
-      val A12 = A.slice(0, mid).map(_.slice(mid, newSize))
-      val A21 = A.slice(mid, newSize).map(_.slice(0, mid))
-      val A22 = A.slice(mid, newSize).map(_.slice(mid, newSize))
+      val mitad = newSize / 2
+      val A11 = subMatriz2(A,0, mitad,0, mitad)
+      val A12 = subMatriz2(A,0, mitad,mitad, newSize)      
+      val A21 = subMatriz2(A,mitad, newSize,0, mitad)      
+      val A22 = subMatriz2(A,mitad, newSize,mitad, newSize)
 
-      val B11 = B.slice(0, mid).map(_.slice(0, mid))
-      val B12 = B.slice(0, mid).map(_.slice(mid, newSize))
-      val B21 = B.slice(mid, newSize).map(_.slice(0, mid))
-      val B22 = B.slice(mid, newSize).map(_.slice(mid, newSize))
+      val B11 = subMatriz2(B,0, mitad,0, mitad)
+      val B12 = subMatriz2(B,0, mitad,mitad, newSize)
+      val B21 = subMatriz2(B,mitad, newSize,0, mitad)
+      val B22 = subMatriz2(B,mitad, newSize,mitad, newSize)
 
 
       val P1 = strassen(A11, restaMatriz(B12, B22))
@@ -125,15 +130,63 @@ def multMatriz(m1: Matriz, m2: Matriz): Matriz = {
       val C22 = restaMatriz(sumMatriz(P5, P1), sumMatriz(P7, P3))
 
     val result: Matriz = Vector.tabulate(newSize) { i =>
-      if (i < mid) {
+      if (i < mitad) {
         Vector.concat(C11(i), C12(i))
       } else {
-        Vector.concat(C21(i - mid), C22(i - mid))
+        Vector.concat(C21(i - mitad), C22(i - mitad))
       }
     }
       result
     }
   }
+
+  def strassenParallel(A: Matriz, B: Matriz): Matriz = {
+    if (A.length == 1) {
+      Vector(Vector(A(0)(0) * B(0)(0)))
+    } else {
+
+      val newSize = A.length
+
+      //Divide las matrices en 4 bloques
+      val mitad = newSize / 2
+      val A11 = subMatriz2(A,0, mitad,0, mitad)
+      val A12 = subMatriz2(A,0, mitad,mitad, newSize)      
+      val A21 = subMatriz2(A,mitad, newSize,0, mitad)      
+      val A22 = subMatriz2(A,mitad, newSize,mitad, newSize)
+
+      val B11 = subMatriz2(B,0, mitad,0, mitad)
+      val B12 = subMatriz2(B,0, mitad,mitad, newSize)
+      val B21 = subMatriz2(B,mitad, newSize,0, mitad)
+      val B22 = subMatriz2(B,mitad, newSize,mitad, newSize)
+
+
+      val P1 = task(strassenParallel(A11, restaMatriz(B12, B22)))
+      val P2 = task(strassenParallel(sumMatriz(A11, A12), B22))
+      val P3 = task(strassenParallel(sumMatriz(A21,A22), B11))
+      val P4 = task(strassenParallel(A22, restaMatriz(B21, B11)))
+      val P5 = task(strassenParallel(sumMatriz(A11, A22), sumMatriz(B11,B22)))
+      val P6 = task(strassenParallel(restaMatriz(A12, A22), sumMatriz(B21, B22)))
+      val P7 = task(strassenParallel(restaMatriz(A11, A21), sumMatriz(B11, B12)))
+
+      
+      val C11 = sumMatriz(sumMatriz(P5.join(), P4.join()), restaMatriz(P6.join(), P2.join()))
+      val C12 = sumMatriz(P1.join(), P2.join())
+      val C21 = sumMatriz(P3.join(), P4.join())
+      val C22 = restaMatriz(sumMatriz(P5.join(), P1.join()), sumMatriz(P7.join(), P3.join()))
+
+    val result: Matriz = Vector.tabulate(newSize) { i =>
+      if (i < mitad) {
+        Vector.concat(C11(i), C12(i))
+      } else {
+        Vector.concat(C21(i - mitad), C22(i - mitad))
+      }
+    }
+      result
+    }
+  }
+
+
+
 
 }
 
