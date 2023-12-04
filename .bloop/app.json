@@ -16,6 +16,8 @@
             "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-collection-compat_2.13\\2.1.1\\2b5b8c8b8756d2ae4fad15692cd23cdab795cb47\\scala-collection-compat_2.13-2.1.1.jar",
             "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.13\\1.2.0\\f6abd60d28c189f05183b26c5363713d1d126b83\\scala-xml_2.13-1.2.0.jar",
             "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parser-combinators_2.13\\1.1.2\\1c591dfd20e117ecd0931de1a7ba12145dc83645\\scala-parser-combinators_2.13-1.1.2.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parallel-collections_3\\1.0.4\\489eaaf53c6603689650560339f03c7f4fea7945\\scala-parallel-collections_3-1.0.4.jar",
+            "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala3-library_3\\3.0.2\\e7bdb8e4b336f3dea5f25e46270de5968d402a1b\\scala3-library_3-3.0.2.jar",
             "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-library\\2.13.11\\4fcd82e1ce42d7b157914b86864e7b3591e1e0d2\\scala-library-2.13.11.jar",
             "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\guava\\32.1.1-jre\\ad575652d84153075dd41ec6177ccb15251262b2\\guava-32.1.1-jre.jar",
             "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\failureaccess\\1.0.1\\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\\failureaccess-1.0.1.jar",
@@ -37,21 +39,55 @@
         "scala": {
             "organization": "org.scala-lang",
             "name": "scala-compiler",
-            "version": "2.13.11",
+            "version": "3.0.2",
             "options": [
                 "-deprecation",
                 "-unchecked"
             ],
             "jars": [
-                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-compiler\\2.13.11\\30e53c6936843f6f470617b6256383171048efde\\scala-compiler-2.13.11.jar",
-                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-sbt\\compiler-bridge_2.13\\1.6.1\\15798fdc2d9dca8962ba3c14ae8deaf34eca2213\\compiler-bridge_2.13-1.6.1-sources.jar",
-                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-sbt\\compiler-interface\\1.6.1\\fa68930e1686c5d251a025ae656fa1e5f0af53fc\\compiler-interface-1.6.1.jar",
-                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-reflect\\2.13.11\\965b382f32d914716b0c6a8d05956a3600a7b35a\\scala-reflect-2.13.11.jar",
-                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-library\\2.13.11\\4fcd82e1ce42d7b157914b86864e7b3591e1e0d2\\scala-library-2.13.11.jar",
-                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\io.github.java-diff-utils\\java-diff-utils\\4.12\\1a712a91324d566eef39817fc5c9980eb10c21db\\java-diff-utils-4.12.jar",
-                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jline\\jline\\3.22.0\\512dde71f1ba9cb87f318e4e1e3acc77dc67a712\\jline-3.22.0.jar",
-                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\net.java.dev.jna\\jna\\5.13.0\\1200e7ebeedbe0d10062093f32925a912020e747\\jna-5.13.0.jar",
-                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-sbt\\util-interface\\1.6.1\\b6280fa8056b59788d04084994fcf5ee9f1ca9f0\\util-interface-1.6.1.jar"
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scaladoc_3\\3.0.2\\139a295abbb9f0765ac1937483fefa69ec92b27b\\scaladoc_3-3.0.2.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala3-tasty-inspector_3\\3.0.2\\5c3f9b699b556cf068972a5f14eb123ac49360ce\\scala3-tasty-inspector_3-3.0.2.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala3-compiler_3\\3.0.2\\44b308e3cd13af7992c3eddff60f0fedc2ad7be9\\scala3-compiler_3-3.0.2.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala3-sbt-bridge\\3.0.2\\dc0b344209ba9ba2daedc628bd06516783349bed\\scala3-sbt-bridge-3.0.2.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala3-interfaces\\3.0.2\\d7bd731e3a08b2a38bbafa0532f05595cd00b277\\scala3-interfaces-3.0.2.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\tasty-core_3\\3.0.2\\41a664ae7e9a2c0b60fa265a483d24df0f3885e4\\tasty-core_3-3.0.2.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala3-library_3\\3.0.2\\e7bdb8e4b336f3dea5f25e46270de5968d402a1b\\scala3-library_3-3.0.2.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-asm\\9.1.0-scala-1\\90aaa7fb03763340aedabe0caddda89e46d7842c\\scala-asm-9.1.0-scala-1.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-sbt\\compiler-interface\\1.3.5\\1f7379ff56b1795b523838cd06ff24272104c380\\compiler-interface-1.3.5.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jline\\jline-reader\\3.19.0\\645d72953711ee4e61705bc5e576fdd1f22c087\\jline-reader-3.19.0.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jline\\jline-terminal-jna\\3.19.0\\c9f9071612424157ca3d5a774a42f2c9b44c10ef\\jline-terminal-jna-3.19.0.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jline\\jline-terminal\\3.19.0\\d4a75a8be7490c8529c029d6baa59e838f45f22e\\jline-terminal-3.19.0.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-html-parser\\0.42.12\\b38f21a54c0ff7382bceb0f9eb8e75ec577692de\\flexmark-html-parser-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-ext-anchorlink\\0.42.12\\afe70dca51a56e11223fef50e2cc341575d61553\\flexmark-ext-anchorlink-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-ext-autolink\\0.42.12\\2ab3a1f43ab2085dc91d43215911979277f6f59b\\flexmark-ext-autolink-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-ext-emoji\\0.42.12\\f0af5fc53c79f63e03c2d49f79550ee486999bb3\\flexmark-ext-emoji-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-jira-converter\\0.42.12\\5d5ded184937a872bf0be65418785be55ba52df5\\flexmark-jira-converter-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-ext-gfm-strikethrough\\0.42.12\\7d74e9e5f0af7cd3450d8c5cc6a0091ca4e3889e\\flexmark-ext-gfm-strikethrough-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-ext-gfm-tables\\0.42.12\\f5240d6c0cf545c043c4ff85d9901b16d63b2e5f\\flexmark-ext-gfm-tables-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-ext-gfm-tasklist\\0.42.12\\bdc5f0b4eaeb518433105c7be7da0c36e8bc7ad1\\flexmark-ext-gfm-tasklist-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-ext-wikilink\\0.42.12\\4925281a6b0ecd85abf1ec69b24a66ab7fe8fc13\\flexmark-ext-wikilink-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-ext-yaml-front-matter\\0.42.12\\1d1dc4fc06640b822f5d494fedc50f9084bcb4cb\\flexmark-ext-yaml-front-matter-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-ext-tables\\0.42.12\\1c7b0753b89929839e174623b572a5fe5a5d4f4b\\flexmark-ext-tables-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-ext-ins\\0.42.12\\757ece03a334461467eecc53a5a444e8229e4ae6\\flexmark-ext-ins-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-ext-superscript\\0.42.12\\931585a8a1b984c7a9c516c133503231178fcd0d\\flexmark-ext-superscript-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-formatter\\0.42.12\\4e59a7db95b222ea7b3d9232538225e13fd49361\\flexmark-formatter-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark\\0.42.12\\154f847d06d0b153d670a9a9bd78d0d573b24af3\\flexmark-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\nl.big-o\\liqp\\0.6.7\\25981e683f3d169376da97dcf5e29914ffe04f75\\liqp-0.6.7.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jsoup\\jsoup\\1.13.1\\f9577f3732bb7caa4fee8aba5053158f4010c118\\jsoup-1.13.1.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.dataformat\\jackson-dataformat-yaml\\2.9.8\\a1c807329eb0c75976aeb5961a506b3516ffeae3\\jackson-dataformat-yaml-2.9.8.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-library\\2.13.6\\ed7a2f528c7389ea65746c22a01031613d98ab3d\\scala-library-2.13.6.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.protobuf\\protobuf-java\\3.7.0\\dbb5e9230a91f2a6d011096c2b9c10a5a6e5f7f2\\protobuf-java-3.7.0.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-sbt\\util-interface\\1.3.0\\edc7556e112da142bf7e9ead1440d024fd3314c4\\util-interface-1.3.0.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\net.java.dev.jna\\jna\\5.3.1\\6eb9d07456c56b9c2560722e90382252f0f98405\\jna-5.3.1.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.vladsch.flexmark\\flexmark-util\\0.42.12\\d138401b9ab2a32f15f48705257bef18baeab5d5\\flexmark-util-0.42.12.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.nibor.autolink\\autolink\\0.6.0\\3986d016a14e8c81afeec752f19af29b20e8367b\\autolink-0.6.0.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.antlr\\antlr\\3.5.1\\241595653f0567bc615b2667c4ef9187e2365043\\antlr-3.5.1.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.core\\jackson-databind\\2.2.3\\3ae380888029daefb91d3ecdca3a37d8cb92bc9\\jackson-databind-2.2.3.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.core\\jackson-annotations\\2.2.3\\527fece4f23a457070a36c371a26d6c0208e1c3\\jackson-annotations-2.2.3.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.fasterxml.jackson.core\\jackson-core\\2.9.8\\f5a654e4675769c716e5b387830d19b501ca191\\jackson-core-2.9.8.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.yaml\\snakeyaml\\1.23\\ec62d74fe50689c28c0ff5b35d3aebcaa8b5be68\\snakeyaml-1.23.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.antlr\\ST4\\4.0.7\\c013c5d7365477500eee744b65257c72f06e5ee\\ST4-4.0.7.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.antlr\\antlr-runtime\\3.5.1\\687cc3df4cf76f7161f83a64a3e8187e3ce9d022\\antlr-runtime-3.5.1.jar"
             ],
             "setup": {
                 "order": "java->scala",
@@ -93,6 +129,8 @@
                 "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-collection-compat_2.13\\2.1.1\\2b5b8c8b8756d2ae4fad15692cd23cdab795cb47\\scala-collection-compat_2.13-2.1.1.jar",
                 "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.13\\1.2.0\\f6abd60d28c189f05183b26c5363713d1d126b83\\scala-xml_2.13-1.2.0.jar",
                 "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parser-combinators_2.13\\1.1.2\\1c591dfd20e117ecd0931de1a7ba12145dc83645\\scala-parser-combinators_2.13-1.1.2.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parallel-collections_3\\1.0.4\\489eaaf53c6603689650560339f03c7f4fea7945\\scala-parallel-collections_3-1.0.4.jar",
+                "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala3-library_3\\3.0.2\\e7bdb8e4b336f3dea5f25e46270de5968d402a1b\\scala3-library_3-3.0.2.jar",
                 "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala-library\\2.13.11\\4fcd82e1ce42d7b157914b86864e7b3591e1e0d2\\scala-library-2.13.11.jar",
                 "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\guava\\32.1.1-jre\\ad575652d84153075dd41ec6177ccb15251262b2\\guava-32.1.1-jre.jar",
                 "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.google.guava\\failureaccess\\1.0.1\\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\\failureaccess-1.0.1.jar",
@@ -109,22 +147,6 @@
         "resolution": {
             "modules": [
                 {
-                    "organization": "org.apache.commons",
-                    "name": "commons-lang3",
-                    "version": "3.4",
-                    "artifacts": [
-                        {
-                            "name": "commons-lang3",
-                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-lang3\\3.4\\5fe28b9518e58819180a43a850fbc0dd24b7c050\\commons-lang3-3.4.jar"
-                        },
-                        {
-                            "name": "commons-lang3",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-lang3\\3.4\\b49dafc9cfef24c356827f322e773e7c26725dd2\\commons-lang3-3.4-sources.jar"
-                        }
-                    ]
-                },
-                {
                     "organization": "org.scalatest",
                     "name": "scalatest-core_2.13",
                     "version": "3.2.16",
@@ -137,6 +159,22 @@
                         {
                             "name": "scalatest-core_2.13",
                             "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-core_2.13\\3.2.16\\1113f9844dff91e14d2924b16c6a88de25c556d2\\scalatest-core_2.13-3.2.16.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.commons",
+                    "name": "commons-lang3",
+                    "version": "3.4",
+                    "artifacts": [
+                        {
+                            "name": "commons-lang3",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-lang3\\3.4\\5fe28b9518e58819180a43a850fbc0dd24b7c050\\commons-lang3-3.4.jar"
+                        },
+                        {
+                            "name": "commons-lang3",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-lang3\\3.4\\b49dafc9cfef24c356827f322e773e7c26725dd2\\commons-lang3-3.4-sources.jar"
                         }
                     ]
                 },
@@ -205,18 +243,18 @@
                     ]
                 },
                 {
-                    "organization": "org.scala-lang.modules",
-                    "name": "scala-parser-combinators_2.13",
-                    "version": "1.1.2",
+                    "organization": "org.scalatest",
+                    "name": "scalatest-wordspec_2.13",
+                    "version": "3.2.16",
                     "artifacts": [
                         {
-                            "name": "scala-parser-combinators_2.13",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parser-combinators_2.13\\1.1.2\\3c11f3bb6efdaf7ab83874f139e9d755215dd3b1\\scala-parser-combinators_2.13-1.1.2-sources.jar"
+                            "name": "scalatest-wordspec_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-wordspec_2.13\\3.2.16\\51384c13194fba18dad0cb6532d52b16057a821c\\scalatest-wordspec_2.13-3.2.16.jar"
                         },
                         {
-                            "name": "scala-parser-combinators_2.13",
-                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parser-combinators_2.13\\1.1.2\\1c591dfd20e117ecd0931de1a7ba12145dc83645\\scala-parser-combinators_2.13-1.1.2.jar"
+                            "name": "scalatest-wordspec_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-wordspec_2.13\\3.2.16\\62eccef7e0ddb2d118a49a8f6d1bbfe98bb26159\\scalatest-wordspec_2.13-3.2.16-sources.jar"
                         }
                     ]
                 },
@@ -237,34 +275,18 @@
                     ]
                 },
                 {
-                    "organization": "org.scalatest",
-                    "name": "scalatest-wordspec_2.13",
-                    "version": "3.2.16",
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-parser-combinators_2.13",
+                    "version": "1.1.2",
                     "artifacts": [
                         {
-                            "name": "scalatest-wordspec_2.13",
-                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-wordspec_2.13\\3.2.16\\51384c13194fba18dad0cb6532d52b16057a821c\\scalatest-wordspec_2.13-3.2.16.jar"
+                            "name": "scala-parser-combinators_2.13",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parser-combinators_2.13\\1.1.2\\3c11f3bb6efdaf7ab83874f139e9d755215dd3b1\\scala-parser-combinators_2.13-1.1.2-sources.jar"
                         },
                         {
-                            "name": "scalatest-wordspec_2.13",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalatest\\scalatest-wordspec_2.13\\3.2.16\\62eccef7e0ddb2d118a49a8f6d1bbfe98bb26159\\scalatest-wordspec_2.13-3.2.16-sources.jar"
-                        }
-                    ]
-                },
-                {
-                    "organization": "org.jline",
-                    "name": "jline",
-                    "version": "3.10.0",
-                    "artifacts": [
-                        {
-                            "name": "jline",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jline\\jline\\3.10.0\\e3327aabdd34fd8f0b8f2cf489336732cea7eda8\\jline-3.10.0-sources.jar"
-                        },
-                        {
-                            "name": "jline",
-                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jline\\jline\\3.10.0\\5a1cf6bd0d3967ec99b2b63cfc3e1987c911b3df\\jline-3.10.0.jar"
+                            "name": "scala-parser-combinators_2.13",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parser-combinators_2.13\\1.1.2\\1c591dfd20e117ecd0931de1a7ba12145dc83645\\scala-parser-combinators_2.13-1.1.2.jar"
                         }
                     ]
                 },
@@ -285,18 +307,18 @@
                     ]
                 },
                 {
-                    "organization": "org.scala-lang.modules",
-                    "name": "scala-xml_2.12",
-                    "version": "1.2.0",
+                    "organization": "org.jline",
+                    "name": "jline",
+                    "version": "3.10.0",
                     "artifacts": [
                         {
-                            "name": "scala-xml_2.12",
-                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.12\\1.2.0\\5d38ac30beb8420dd395c0af447ba412158965e6\\scala-xml_2.12-1.2.0.jar"
+                            "name": "jline",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jline\\jline\\3.10.0\\e3327aabdd34fd8f0b8f2cf489336732cea7eda8\\jline-3.10.0-sources.jar"
                         },
                         {
-                            "name": "scala-xml_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.12\\1.2.0\\97b3021c2ceef1170ff2f0e8a12a1cb5dfc9bfd3\\scala-xml_2.12-1.2.0-sources.jar"
+                            "name": "jline",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.jline\\jline\\3.10.0\\5a1cf6bd0d3967ec99b2b63cfc3e1987c911b3df\\jline-3.10.0.jar"
                         }
                     ]
                 },
@@ -313,6 +335,22 @@
                         {
                             "name": "scalastyle_2.12",
                             "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\com.beautiful-scala\\scalastyle_2.12\\1.2.0\\662428064dd23bf9bb688a58eca4c5208661fee\\scalastyle_2.12-1.2.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-xml_2.12",
+                    "version": "1.2.0",
+                    "artifacts": [
+                        {
+                            "name": "scala-xml_2.12",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.12\\1.2.0\\5d38ac30beb8420dd395c0af447ba412158965e6\\scala-xml_2.12-1.2.0.jar"
+                        },
+                        {
+                            "name": "scala-xml_2.12",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-xml_2.12\\1.2.0\\97b3021c2ceef1170ff2f0e8a12a1cb5dfc9bfd3\\scala-xml_2.12-1.2.0-sources.jar"
                         }
                     ]
                 },
@@ -345,6 +383,38 @@
                             "name": "scalariform_2.12",
                             "classifier": "sources",
                             "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scalariform\\scalariform_2.12\\0.2.10\\85a157f52179d317d652cc7b6130b6eb708c60a1\\scalariform_2.12-0.2.10-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala3-library_3",
+                    "version": "3.0.2",
+                    "artifacts": [
+                        {
+                            "name": "scala3-library_3",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala3-library_3\\3.0.2\\5cc89daac53dd8fc787166af257e7681dc9930a6\\scala3-library_3-3.0.2-sources.jar"
+                        },
+                        {
+                            "name": "scala3-library_3",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang\\scala3-library_3\\3.0.2\\e7bdb8e4b336f3dea5f25e46270de5968d402a1b\\scala3-library_3-3.0.2.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-parallel-collections_3",
+                    "version": "1.0.4",
+                    "artifacts": [
+                        {
+                            "name": "scala-parallel-collections_3",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parallel-collections_3\\1.0.4\\9a5e0141b0ef67295f9a98795dcd8b2dc1e36447\\scala-parallel-collections_3-1.0.4-sources.jar"
+                        },
+                        {
+                            "name": "scala-parallel-collections_3",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parallel-collections_3\\1.0.4\\489eaaf53c6603689650560339f03c7f4fea7945\\scala-parallel-collections_3-1.0.4.jar"
                         }
                     ]
                 },
@@ -750,22 +820,6 @@
                 },
                 {
                     "organization": "org.scala-lang.modules",
-                    "name": "scala-collection-compat_2.12",
-                    "version": "2.1.4",
-                    "artifacts": [
-                        {
-                            "name": "scala-collection-compat_2.12",
-                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-collection-compat_2.12\\2.1.4\\5e30f17a3653f475e8c046c071c1c3559122dfb8\\scala-collection-compat_2.12-2.1.4.jar"
-                        },
-                        {
-                            "name": "scala-collection-compat_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-collection-compat_2.12\\2.1.4\\ae0e0ffebfc9309a549d76712db78a3b3669fd77\\scala-collection-compat_2.12-2.1.4-sources.jar"
-                        }
-                    ]
-                },
-                {
-                    "organization": "org.scala-lang.modules",
                     "name": "scala-parser-combinators_2.12",
                     "version": "1.1.2",
                     "artifacts": [
@@ -777,6 +831,22 @@
                             "name": "scala-parser-combinators_2.12",
                             "classifier": "sources",
                             "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-parser-combinators_2.12\\1.1.2\\17be9d543fa1f7f01d57722cc37d0c4024a15f69\\scala-parser-combinators_2.12-1.1.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-collection-compat_2.12",
+                    "version": "2.1.4",
+                    "artifacts": [
+                        {
+                            "name": "scala-collection-compat_2.12",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-collection-compat_2.12\\2.1.4\\5e30f17a3653f475e8c046c071c1c3559122dfb8\\scala-collection-compat_2.12-2.1.4.jar"
+                        },
+                        {
+                            "name": "scala-collection-compat_2.12",
+                            "classifier": "sources",
+                            "path": "C:\\Users\\ALEJANDRO\\.gradle\\caches\\modules-2\\files-2.1\\org.scala-lang.modules\\scala-collection-compat_2.12\\2.1.4\\ae0e0ffebfc9309a549d76712db78a3b3669fd77\\scala-collection-compat_2.12-2.1.4-sources.jar"
                         }
                     ]
                 },

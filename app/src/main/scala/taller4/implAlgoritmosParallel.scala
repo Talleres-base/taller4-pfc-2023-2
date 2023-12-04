@@ -1,10 +1,17 @@
 package taller4
 
+import scala.collection.parallel.CollectionConverters._
 import common._
 
 class implAlgoritmosParallel{
     type Matriz = Vector [ Vector [ Int ] ]
     val obj = new implAlgoritmos()
+
+    def prodPuntoParD(v1: Vector[Int], v2: Vector[Int]): Int = {
+    val resultadoParalelo = v1.par.zip(v2.par).map { case (x, y) => x * y }.sum
+
+    resultadoParalelo
+  }
 
     def multMatrizPar(m1: Matriz, m2: Matriz): Matriz = {
     val filasM1 = m1.length
@@ -32,7 +39,7 @@ class implAlgoritmosParallel{
     resultados.grouped(m1.length).toVector
    }
 
-  def multMatrizParV2(m1: Matriz, m2: Matriz): Matriz = {
+  def multMatrizParV2(m1: Matriz, m2: Matriz): Matriz ={
     
     def bloquesTarea (bloqueM1: Matriz, transpuesta: Matriz): Matriz = {
        obj.multMatriz(bloqueM1, transpuesta)

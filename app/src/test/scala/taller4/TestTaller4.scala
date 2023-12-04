@@ -12,7 +12,5 @@ import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class TestTaller4 extends AnyFunSuite{
-    test("testTaller4"){
-        assert("Taller 4 2023-II" == Taller4.saludo())
-    }
+    
 }

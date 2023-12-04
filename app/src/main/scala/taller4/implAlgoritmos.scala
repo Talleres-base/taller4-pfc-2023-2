@@ -3,7 +3,7 @@ import scala.util.Random
 
 
 class implAlgoritmos {     
-    type Matriz = Vector [ Vector [ Int ] ]
+    type Matriz = Vector [Vector[Int]]
 
   def matrizAlAzar(Long: Int, vals: Int): Matriz = {
     val v = Vector.fill(Long, Long){Random.nextInt(vals)}
@@ -27,13 +27,13 @@ class implAlgoritmos {
   }
 
 
-def multMatriz(m1: Matriz, m2: Matriz): Matriz = {
+  def multMatriz(m1: Matriz, m2: Matriz): Matriz = {
     val l1 = m1.length
     val l2 = m2.head.length
     val m2t = transpuesta(m2)
     val m3: Matriz = Vector.tabulate(l1, l2)((i, j) => prodPunto(m1(i), m2t(j)))
     m3
-}
+  }
 
   def sumMatriz(m1: Matriz, m2: Matriz): Matriz = {
     val l=m1.length
@@ -95,8 +95,7 @@ def multMatriz(m1: Matriz, m2: Matriz): Matriz = {
     auxMultMatrizRec(m1,m2,matriz,m1.length,0,0,Vector())
   }
   
-  
-   def strassen(A: Matriz, B: Matriz): Matriz = {
+  def strassen(A: Matriz, B: Matriz) :Matriz={
     if (A.length == 1) {
       Vector(Vector(A(0)(0) * B(0)(0)))
     } else {
@@ -130,7 +129,7 @@ def multMatriz(m1: Matriz, m2: Matriz): Matriz = {
       val C21 = sumMatriz(P3, P4)
       val C22 = restaMatriz(sumMatriz(P5, P1), sumMatriz(P7, P3))
 
-    val result: Matriz = Vector.tabulate(newSize) { i =>
+      val result: Matriz = Vector.tabulate(newSize) { i =>
       if (i < mitad) {
         Vector.concat(C11(i), C12(i))
       } else {

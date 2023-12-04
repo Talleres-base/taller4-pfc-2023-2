@@ -28,7 +28,8 @@ dependencies {
     implementation 'com.google.guava:guava:32.1.1-jre'
     //Scalameter core
     implementation 'com.storm-enroute:scalameter-core_2.13:0.21'
-
+    
+    implementation 'org.scala-lang.modules:scala-parallel-collections_3:1.0.4'
     // Use Scalatest for testing our library
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.scalatest:scalatest_2.13:3.2.16'
