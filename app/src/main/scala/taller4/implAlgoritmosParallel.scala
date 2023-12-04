@@ -7,13 +7,13 @@ class implAlgoritmosParallel{
     type Matriz = Vector [ Vector [ Int ] ]
     val obj = new implAlgoritmos()
 
-    def prodPuntoParD(v1: Vector[Int], v2: Vector[Int]): Int = {
+  def prodPuntoParD(v1: Vector[Int], v2: Vector[Int]): Int = {
     val resultadoParalelo = v1.par.zip(v2.par).map { case (x, y) => x * y }.sum
 
     resultadoParalelo
   }
 
-    def multMatrizPar(m1: Matriz, m2: Matriz): Matriz = {
+  def multMatrizPar(m1: Matriz, m2: Matriz): Matriz = {
     val filasM1 = m1.length
     val columnasM2 = m2(0).length
 
@@ -37,7 +37,7 @@ class implAlgoritmosParallel{
 
     val resultados = tareas.map(_.toInt).toVector
     resultados.grouped(m1.length).toVector
-   }
+  }
 
   def multMatrizParV2(m1: Matriz, m2: Matriz): Matriz ={
     
@@ -78,7 +78,7 @@ class implAlgoritmosParallel{
     
   }
 
-    def multMatrizRecParallel (m1:Matriz , m2: Matriz ) : Matriz ={
+  def multMatrizRecParallel (m1:Matriz , m2: Matriz ) : Matriz ={
 
     def auxSumaVectorMatriz(matriz: Matriz, posicion: Int, acumuladorSuma : Vector[Vector[Int]]): Vector[Int]={
       if (posicion == matriz.length) {acumuladorSuma(0)}
@@ -153,7 +153,7 @@ class implAlgoritmosParallel{
       val C21 = obj.sumMatriz(P3.join(), P4.join())
       val C22 = obj.restaMatriz(obj.sumMatriz(P5.join(), P1.join()), obj.sumMatriz(P7.join(), P3.join()))
 
-    val result: Matriz = Vector.tabulate(newSize) { i =>
+      val result: Matriz = Vector.tabulate(newSize) { i =>
       if (i < mitad) {
         Vector.concat(C11(i), C12(i))
       } else {
@@ -163,6 +163,5 @@ class implAlgoritmosParallel{
       result
     }
   }
-
-    
+   
 }

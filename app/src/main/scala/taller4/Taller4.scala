@@ -47,14 +47,19 @@ object Taller4{
     println(obj2.multMatrizParV2(A,B))
     println(obj2.multMatrizRecParallel(A,B))
 
-    println("Comparación de algoritmos")
-    val prueba = for {
-      i <- 1 to 7
-    m1=obj.matrizAlAzar (math.pow(2 , i ).toInt , 2)
-    m2=obj.matrizAlAzar (math.pow(2 , i ).toInt , 2)
-  } yield ( obj3.compararAlgoritmos (obj.multMatriz , obj2.multMatrizRecParallel ) (m1,m2) ,math.pow(2 , i ).toInt )
+    // println("Comparación de algoritmos")
+    // val prueba = for {
+    //   i <- 1 to 7
+    //   m1=obj.matrizAlAzar (math.pow(2 , i ).toInt , 2)
+    //   m2=obj.matrizAlAzar (math.pow(2 , i ).toInt , 2)
+    // } yield ( obj3.compararAlgoritmos (obj.multMatrizRec , obj2.multMatrizRecParallel ) (m1,m2) ,math.pow(2 , i ).toInt )
 
-  println(prueba)
+    // println(prueba)
+
+    val tiros =10000000
+    println("Comparación de productos punto")
+    println("Cantidad de tiros: " +tiros)
+    println(obj3.compararProdPunto(tiros))
     //println(obj3.CompararAlgoritmos(obj.multMatrizRec, obj.strassen)(obj.matrizAlAzar(32,2),obj.matrizAlAzar(32,2)))
     
     // val strassenTime = (1 to 100).map(_ => 0.0).toArray
