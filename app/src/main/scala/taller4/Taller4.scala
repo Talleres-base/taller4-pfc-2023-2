@@ -43,7 +43,6 @@ object Taller4{
     println(obj.strassen(A,B))
     println(obj2.strassenParallel(A,B))
     println(obj.multMatriz(A,B))
-    println(obj2.multMatrizPar(A,B))
     println(obj2.multMatrizParV2(A,B))
     println(obj2.multMatrizRecParallel(A,B))
 

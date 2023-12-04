@@ -56,11 +56,11 @@ class implAlgoritmos {
    
   def multMatrizRec (m1:Matriz , m2: Matriz ) : Matriz ={
 
-    def auxSumaVectorMatriz(matriz: Matriz, posicion: Int, acumuladorSuma : Vector[Vector[Int]]): Vector[Int]={
+    def auxSumaMatriz(matriz: Matriz, posicion: Int, acumuladorSuma : Vector[Vector[Int]]): Vector[Int]={
       if (posicion == matriz.length) {acumuladorSuma(0)}
       else{
         val suma = sumMatriz(subMatriz(matriz,(posicion),0,matriz.length),acumuladorSuma.appended(Vector(0)))
-        auxSumaVectorMatriz(matriz,posicion+1,suma)
+        auxSumaMatriz(matriz,posicion+1,suma)
       }
     }
 
@@ -77,7 +77,7 @@ class implAlgoritmos {
      else{
       val vectorSuma = Vector.tabulate(tamanio)((i) => prodPunto(subMatriz(m1,posicionQuieta,i,m1.length)(0), transpuesta(subMatriz(m2,i,posicionCambiante,m2.length))(0)))
       val nuevoVector= modificarVector(vectorSuma,0,vectorSuma.length,Vector())
-      val aux2 = auxVector ++ auxSumaVectorMatriz(nuevoVector,0,Vector())
+      val aux2 = auxVector ++ auxSumaMatriz(nuevoVector,0,Vector())
       
       if(aux2.length == tamanio){
         val nuevaMatriz = auxMatriz:+aux2

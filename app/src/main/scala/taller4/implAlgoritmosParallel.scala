@@ -6,40 +6,13 @@ import common._
 class implAlgoritmosParallel{
     type Matriz = Vector [ Vector [ Int ] ]
     val obj = new implAlgoritmos()
+    def prodPuntoParD(v1: Vector[Int], v2: Vector[Int]): Int = {
+      val resultadoParalelo = v1.par.zip(v2.par).map { case (x, y) => x * y }.sum
 
-  def prodPuntoParD(v1: Vector[Int], v2: Vector[Int]): Int = {
-    val resultadoParalelo = v1.par.zip(v2.par).map { case (x, y) => x * y }.sum
-
-    resultadoParalelo
-  }
-
-  def multMatrizPar(m1: Matriz, m2: Matriz): Matriz = {
-    val filasM1 = m1.length
-    val columnasM2 = m2(0).length
-
-    def calcularElemento(fila: Vector[Int], columnaTranspuesta: Vector[Int]): Int = {
-      obj.prodPunto(fila, columnaTranspuesta)
+      resultadoParalelo
     }
 
-    def crearTarea(i: Int, j: Int): Int = {
-      val tarea = task {
-        val fila = m1(i)
-        val columnaTranspuesta = obj.transpuesta(m2)(j)
-        calcularElemento(fila, columnaTranspuesta)
-      }
-      tarea.join
-    }
-
-    val tareas = for {
-      i <- 0 until filasM1
-      j <- 0 until columnasM2
-    } yield crearTarea(i, j)
-
-    val resultados = tareas.map(_.toInt).toVector
-    resultados.grouped(m1.length).toVector
-  }
-
-  def multMatrizParV2(m1: Matriz, m2: Matriz): Matriz ={
+    def multMatrizParV2(m1: Matriz, m2: Matriz): Matriz ={
     
     def bloquesTarea (bloqueM1: Matriz, transpuesta: Matriz): Matriz = {
        obj.multMatriz(bloqueM1, transpuesta)
@@ -78,13 +51,13 @@ class implAlgoritmosParallel{
     
   }
 
-  def multMatrizRecParallel (m1:Matriz , m2: Matriz ) : Matriz ={
+    def multMatrizRecParallel (m1:Matriz , m2: Matriz ) : Matriz ={
 
-    def auxSumaVectorMatriz(matriz: Matriz, posicion: Int, acumuladorSuma : Vector[Vector[Int]]): Vector[Int]={
+    def auxSumaMatriz(matriz: Matriz, posicion: Int, acumuladorSuma : Vector[Vector[Int]]): Vector[Int]={
       if (posicion == matriz.length) {acumuladorSuma(0)}
       else{
         val suma = obj.sumMatriz(obj.subMatriz(matriz,(posicion),0,matriz.length),acumuladorSuma.appended(Vector(0)))
-        auxSumaVectorMatriz(matriz,posicion+1,suma)
+        auxSumaMatriz(matriz,posicion+1,suma)
       }
     }
 
@@ -101,7 +74,7 @@ class implAlgoritmosParallel{
      else{
       val vectorSuma = task(Vector.tabulate(tamanio)((i) => obj.prodPunto(obj.subMatriz(m1,posicionQuieta,i,m1.length)(0), obj.transpuesta(obj.subMatriz(m2,i,posicionCambiante,m2.length))(0))))
       val nuevoVector= modificarVector(vectorSuma.join(),0,vectorSuma.join.length,Vector())
-      val aux2 = auxVector ++ auxSumaVectorMatriz(nuevoVector,0,Vector())
+      val aux2 = auxVector ++ auxSumaMatriz(nuevoVector,0,Vector())
       
       if(aux2.length == tamanio){
         val nuevaMatriz = auxMatriz:+aux2
@@ -119,7 +92,7 @@ class implAlgoritmosParallel{
     auxMultMatrizRecParallel(m1,m2,matriz,m1.length,0,0,Vector())
   }
   
-  def strassenParallel(A: Matriz, B: Matriz): Matriz = {
+    def strassenParallel(A: Matriz, B: Matriz): Matriz = {
     if (A.length == 1) {
       Vector(Vector(A(0)(0) * B(0)(0)))
     } else {
@@ -138,7 +111,6 @@ class implAlgoritmosParallel{
       val B21 = obj.subMatriz2(B,mitad, newSize,0, mitad)
       val B22 = obj.subMatriz2(B,mitad, newSize,mitad, newSize)
 
-
       val P1 = task(strassenParallel(A11, obj.restaMatriz(B12, B22)))
       val P2 = task(strassenParallel(obj.sumMatriz(A11, A12), B22))
       val P3 = task(strassenParallel(obj.sumMatriz(A21,A22), B11))
@@ -147,7 +119,6 @@ class implAlgoritmosParallel{
       val P6 = task(strassenParallel(obj.restaMatriz(A12, A22), obj.sumMatriz(B21, B22)))
       val P7 = task(strassenParallel(obj.restaMatriz(A11, A21), obj.sumMatriz(B11, B12)))
 
-      
       val C11 = obj.sumMatriz(obj.sumMatriz(P5.join(), P4.join()), obj.restaMatriz(P6.join(), P2.join()))
       val C12 = obj.sumMatriz(P1.join(), P2.join())
       val C21 = obj.sumMatriz(P3.join(), P4.join())
