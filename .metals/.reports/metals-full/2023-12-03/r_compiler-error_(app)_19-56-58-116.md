@@ -1,3 +1,13 @@
+file:///C:/Users/ALEJANDRO/github-classroom/Programacion-funcional-2023-I/taller4-pfc-2023-2/app/src/main/scala/taller4/implAlgoritmosParallel.scala
+### java.lang.StringIndexOutOfBoundsException: offset 5771, count -10, length 6285
+
+occurred in the presentation compiler.
+
+action parameters:
+offset: 5874
+uri: file:///C:/Users/ALEJANDRO/github-classroom/Programacion-funcional-2023-I/taller4-pfc-2023-2/app/src/main/scala/taller4/implAlgoritmosParallel.scala
+text:
+```scala
 package taller4
 
 import common._
@@ -93,7 +103,7 @@ class implAlgoritmosParallel{
      if (auxMatriz.length == m1.length ) {auxMatriz}
      else{
       val vectorSuma = task(Vector.tabulate(tamanio)((i) => obj.prodPunto(obj.subMatriz(m1,posicionQuieta,i,m1.length)(0), obj.transpuesta(obj.subMatriz(m2,i,posicionCambiante,m2.length))(0))))
-      val nuevoVector= modificarVector(vectorSuma.join(),0,vectorSuma.join.length,Vector())
+      val nuevoVector= modificarVector(vectorSuma.join(),0,vectorSuma.join().length,Vector())
       val aux2 = auxVector ++ auxSumaVectorMatriz(nuevoVector,0,Vector())
       
       if(aux2.length == tamanio){
@@ -141,10 +151,8 @@ class implAlgoritmosParallel{
       val P7 = task(strassenParallel(obj.restaMatriz(A11, A21), obj.sumMatriz(B11, B12)))
 
       
-      val C11 = obj.sumMatriz(obj.sumMatriz(P5.join(), P4.join()), obj.restaMatriz(P6.join(), P2.join()))
-      val C12 = obj.sumMatriz(P1.join(), P2.join())
-      val C21 = obj.sumMatriz(P3.join(), P4.join())
-      val C22 = obj.restaMatriz(obj.sumMatriz(P5.join(), P1.join()), obj.sumMatriz(P7.join(), P3.join()))
+      val (C11,C12,C21,C22) = parallel(obj.sumMatriz(obj.sumMatriz(P5.join(), P4.join()), obj.restaMatriz(P6.join(), P2.join()))
+      val C12@@,obj.sumMatriz(P1.join(), P2.join()),obj.sumMatriz(P3.join(), P4.join()),obj.restaMatriz(obj.sumMatriz(P5.join(), P1.join()), obj.sumMatriz(P7.join(), P3.join())))
 
     val result: Matriz = Vector.tabulate(newSize) { i =>
       if (i < mitad) {
@@ -159,3 +167,28 @@ class implAlgoritmosParallel{
 
     
 }
+```
+
+
+
+#### Error stacktrace:
+
+```
+java.base/java.lang.String.checkBoundsOffCount(String.java:4589)
+	java.base/java.lang.String.rangeCheck(String.java:304)
+	java.base/java.lang.String.<init>(String.java:300)
+	scala.tools.nsc.interactive.Global.typeCompletions$1(Global.scala:1245)
+	scala.tools.nsc.interactive.Global.completionsAt(Global.scala:1283)
+	scala.meta.internal.pc.SignatureHelpProvider.$anonfun$treeSymbol$1(SignatureHelpProvider.scala:390)
+	scala.Option.map(Option.scala:242)
+	scala.meta.internal.pc.SignatureHelpProvider.treeSymbol(SignatureHelpProvider.scala:388)
+	scala.meta.internal.pc.SignatureHelpProvider$MethodCall$.unapply(SignatureHelpProvider.scala:205)
+	scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.visit(SignatureHelpProvider.scala:316)
+	scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.traverse(SignatureHelpProvider.scala:310)
+	scala.meta.internal.pc.SignatureHelpProvider$MethodCallTraverser.fromTree(SignatureHelpProvider.scala:279)
+	scala.meta.internal.pc.SignatureHelpProvider.signatureHelp(SignatureHelpProvider.scala:27)
+	scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$signatureHelp$1(ScalaPresentationCompiler.scala:282)
+```
+#### Short summary: 
+
+java.lang.StringIndexOutOfBoundsException: offset 5771, count -10, length 6285
