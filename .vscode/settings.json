@@ -3,5 +3,7 @@
         "**/target": true
     },
     "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "gradle.nestedProjects": false,
+    "metals.fallbackScalaVersion": "2.13.12"
 }
