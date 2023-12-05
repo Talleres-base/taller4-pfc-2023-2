@@ -192,4 +192,29 @@ class testMultMatriz extends AnyFunSuite {
       throw new Exception(s"\nEl resultado de multStrassPar no coincide con el esperado")
     }
   }
+
+    test("Prueba5") {
+      // Ejemplo de matriz para pruebas
+      val matrizEjemplo: Matriz = Vector(
+        Vector(1, 2, 3),
+        Vector(4, 5, 6),
+        Vector(7, 8, 9)
+      )
+      val esperado = Vector(Vector(1, 2), Vector(4, 5))
+      if (subMatriz(matrizEjemplo, 0, 0, 2) != esperado) {
+        throw new Exception(s"\nEl resultado de subMatriz no coincide con el esperado")
+      }
+      val matriz1 = Vector(Vector(1, 2), Vector(3, 4))
+      val matriz2 = Vector(Vector(5, 6), Vector(7, 8))
+      val esperado2 = Vector(Vector(6, 8), Vector(10, 12))
+      if (sumMatriz(matriz1, matriz2) != esperado2) {
+        throw new Exception(s"\nEl resultado de sumMatriz no coincide con el esperado.${sumMatriz(matriz1, matriz2)} 0 ${esperado}")
+      }
+      val matriz4 = Vector(Vector(5, 6), Vector(7, 8))
+      val matriz5 = Vector(Vector(1, 2), Vector(3, 4))
+      val esperado3 = Vector(Vector(4, 4), Vector(4, 4))
+      if (restaMatriz(matriz4, matriz5)!= esperado3) {
+        throw new Exception(s"\nEl resultado de restaMatriz no coincide con el esperado.${restaMatriz(matriz4, matriz5)} 0 ${esperado}")
+      }
+    }
 }

@@ -11,7 +11,7 @@ import org.scalameter.withWarmer
 import org.scalameter.Warmer
 import scala.util.Random
 //import scala.collection.parallel.CollectionConverters._
-
+//import scala.collection.parallel.immutable.ParVector
 import common._
 //import org.scalameter._
 
@@ -32,19 +32,13 @@ object Taller4{
     (v1 zip v2).map({ case (i, j) => i * j }).sum
   }
 
-  //def prodPuntoParD( v1 : ParVector[Int], v2 : ParVector[Int] ): Int={
-  //  (v1 zip v2).map({ case(i,j) => (i∗j)}).sum
+  //def prodPuntoParD(v1: ParVector[Int], v2: ParVector[Int]): Int = {
+  //  (v1 zip v2).map({ case (i, j) => (i*j)}).sum
   //}
-
 
   def transpuesta(m: Matriz): Matriz = {
     val l = m.length
     Vector.tabulate(l, l)((i, j) => m(j)(i))
-  }
-
-  def multMatrizAux(vec1:Vector[Int],matrizTransformer:Matriz): Vector[Int]={
-    if (matrizTransformer.length == 1) Vector(prodPunto(vec1,matrizTransformer.head))
-    else Vector(prodPunto(vec1,matrizTransformer.head)) ++ multMatrizAux(vec1,matrizTransformer.tail)
   }
 
   def multMatriz(m1: Matriz, m2: Matriz): Matriz = {
@@ -179,8 +173,6 @@ object Taller4{
     }
   }
 
-
-
   def restaMatriz(m1: Matriz, m2: Matriz): Matriz ={
     //Recibe m1 y m2 matrices cuadradas de la misma dimensión, potencia de 2
     //y devuelve la matriz resultante de la resta de las 2 matrices
@@ -313,6 +305,28 @@ object Taller4{
  
   def main(args: Array[String]): Unit = {
     println(saludo())
+    println(" pruebas multMatriz")
+    val resultados = for{
+      i <- 1 to 10
+      m1=matrizAlAzar(math.pow(2,i).toInt,2)
+      m2=matrizAlAzar(math.pow(2,i).toInt,2)
+    } yield (compararAlgoritmos(multMatriz,multMatrizPar)(m1,m2),math.pow(2,i).toInt)
+    resultados.foreach(println)
+    println(" pruebas multMatrizRec")
+    val resultados1 = for{
+      i <- 1 to 10
+      m1=matrizAlAzar(math.pow(2,i).toInt,2)
+      m2=matrizAlAzar(math.pow(2,i).toInt,2)
+    } yield (compararAlgoritmos(multMatrizRec,multMatrizRecPar)(m1,m2),math.pow(2,i).toInt)
+    resultados1.foreach(println)
+    println(" pruebas multStrass")
+    val resultados2 = for{
+      i <- 1 to 10
+      m1=matrizAlAzar(math.pow(2,i).toInt,2)
+      m2=matrizAlAzar(math.pow(2,i).toInt,2)
+    } yield (compararAlgoritmos(multStrass,multStrassPar)(m1,m2),math.pow(2,i).toInt)
+    resultados2.foreach(println)
+    /*
     println(" pruebas 8x8")
     val m1 = matrizAlAzar(8,10)
     val m2 = matrizAlAzar(8,10)
@@ -337,6 +351,6 @@ object Taller4{
     println(compararAlgoritmos(multMatriz,multMatrizPar)(m7,m8))
     println(compararAlgoritmos(multMatrizRec,multMatrizRecPar)(m7,m8))
     println(compararAlgoritmos(multStrass,multStrassPar)(m7,m8))
-    
+    */
   }
 }
