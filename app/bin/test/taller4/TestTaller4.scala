@@ -1,6 +1,6 @@
 /**
  * Plantilla para pruebas
-* @author Carlos Delgado
+* @author miguel angel cebalos, Cristhian leonardo Albarracin zapata,Nicolás Gutiérrez Ramírez
 * @version 1.0
 * @note 22 de Noviembre de 2023 
  */

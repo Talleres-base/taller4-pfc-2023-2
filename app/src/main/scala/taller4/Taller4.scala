@@ -1,6 +1,6 @@
 /**
   * Taller 3 - Programación Funcional
-  * Autores: miguel angel ceballos y ya
+  * Autores: miguel angel cebalos 2259619, Cristhian leonardo Albarracin zapata 1968253 ,Nicolás Gutiérrez Ramírez 2259515
   * Profesor: Carlos A Delgado
   */
 package taller4
@@ -131,54 +131,53 @@ object Taller4{
   }
   //
   // Esta función recibe dos matrices cuadradas de la misma dimensión y devuelve su productossss
-  // Esta función recibe dos matrices cuadradas de la misma dimensión y devuelve su producto
-def multMatrizRecPar(m1: Matriz, m2: Matriz): Matriz = {
-  if (m1.length == 1) Vector(Vector(m1(0)(0) * m2(0)(0)))
-  else {
-    val m2T = m2
-    // Se crean las submatrices de la primera matriz
-    val (m1SubMatrices,m2SubMatrices) = parallel(Vector(
-      subMatriz(m1, 0, 0, m1.length / 2),
-      subMatriz(m1, 0, m1.length / 2, m1.length / 2),
-      subMatriz(m1, m1.length / 2, 0, m1.length / 2),
-      subMatriz(m1, m1.length / 2, m1.length / 2, m1.length / 2)
-    ),Vector(
-      subMatriz(m2T, 0, 0, m2.length / 2),
-      subMatriz(m2T, 0, m2.length / 2, m2.length / 2),
-      subMatriz(m2T, m2.length / 2, 0, m2.length / 2),
-      subMatriz(m2T, m2.length / 2, m2.length / 2, m2.length / 2)
-    ))
+  def multMatrizRecPar(m1: Matriz, m2: Matriz): Matriz = {
+    if (m1.length == 1) Vector(Vector(m1(0)(0) * m2(0)(0)))
+    else {
+      val m2T = m2
+      // Se crean las submatrices de la primera matriz
+      val (m1SubMatrices,m2SubMatrices) = parallel(Vector(
+        subMatriz(m1, 0, 0, m1.length / 2),
+        subMatriz(m1, 0, m1.length / 2, m1.length / 2),
+        subMatriz(m1, m1.length / 2, 0, m1.length / 2),
+        subMatriz(m1, m1.length / 2, m1.length / 2, m1.length / 2)
+      ),Vector(
+        subMatriz(m2T, 0, 0, m2.length / 2),
+        subMatriz(m2T, 0, m2.length / 2, m2.length / 2),
+        subMatriz(m2T, m2.length / 2, 0, m2.length / 2),
+        subMatriz(m2T, m2.length / 2, m2.length / 2, m2.length / 2)
+      ))
 
-    // Se calculan los cuatro bloques de la matriz producto
-    val (c1, c2, c3, c4) = parallel(
-      sumMatriz(
-        multMatrizRecPar(m1SubMatrices(0), m2SubMatrices(0)),
-        multMatrizRecPar(m1SubMatrices(1), m2SubMatrices(2))
-      ),
-      sumMatriz(
-        multMatrizRecPar(m1SubMatrices(0), m2SubMatrices(1)),
-        multMatrizRecPar(m1SubMatrices(1), m2SubMatrices(3))
-      ),
-      sumMatriz(
-        multMatrizRecPar(m1SubMatrices(2), m2SubMatrices(0)),
-        multMatrizRecPar(m1SubMatrices(3), m2SubMatrices(2))
-      ),
-      sumMatriz(
-        multMatrizRecPar(m1SubMatrices(2), m2SubMatrices(1)),
-        multMatrizRecPar(m1SubMatrices(3), m2SubMatrices(3))
+      // Se calculan los cuatro bloques de la matriz producto
+      val (c1, c2, c3, c4) = parallel(
+        sumMatriz(
+          multMatrizRecPar(m1SubMatrices(0), m2SubMatrices(0)),
+          multMatrizRecPar(m1SubMatrices(1), m2SubMatrices(2))
+        ),
+        sumMatriz(
+          multMatrizRecPar(m1SubMatrices(0), m2SubMatrices(1)),
+          multMatrizRecPar(m1SubMatrices(1), m2SubMatrices(3))
+        ),
+        sumMatriz(
+          multMatrizRecPar(m1SubMatrices(2), m2SubMatrices(0)),
+          multMatrizRecPar(m1SubMatrices(3), m2SubMatrices(2))
+        ),
+        sumMatriz(
+          multMatrizRecPar(m1SubMatrices(2), m2SubMatrices(1)),
+          multMatrizRecPar(m1SubMatrices(3), m2SubMatrices(3))
+        )
       )
-    )
-    // Se unen los cuatro bloques para formar la matriz producto
-    val sumavector1y2 = Vector.tabulate(c1.size)(y =>
-        (c1(y)++c2(y))
-      )
-      val sumavector3y4 = Vector.tabulate(c3.size)(y =>
-        (c3(y)++c4(y))
-      )
-      sumavector1y2 ++ sumavector3y4
-    
+      // Se unen los cuatro bloques para formar la matriz producto
+      val sumavector1y2 = Vector.tabulate(c1.size)(y =>
+          (c1(y)++c2(y))
+        )
+        val sumavector3y4 = Vector.tabulate(c3.size)(y =>
+          (c3(y)++c4(y))
+        )
+        sumavector1y2 ++ sumavector3y4
+      
+    }
   }
-}
 
 
 
@@ -240,52 +239,52 @@ def multMatrizRecPar(m1: Matriz, m2: Matriz): Matriz = {
   }
 
   def multStrassPar(m1: Matriz, m2: Matriz): Matriz = {
-  if (m1.length == 1) Vector(Vector(m1(0)(0) * m2(0)(0)))
-  else {
-    // Se usa la abstracción parallel para crear un par de vectores paralelos con las submatrices de la primera y la segunda matriz
-    val (m1SubMatrices,m2SubMatrices) = parallel(Vector(
-      subMatriz(m1, 0, 0, m1.length / 2),
-      subMatriz(m1, 0, m1.length / 2, m1.length / 2),
-      subMatriz(m1, m1.length / 2, 0, m1.length / 2),
-      subMatriz(m1, m1.length / 2, m1.length / 2, m1.length / 2)
-    ),Vector(
-      subMatriz(m2, 0, 0, m2.length / 2),
-      subMatriz(m2, 0, m2.length / 2, m2.length / 2),
-      subMatriz(m2, m2.length / 2, 0, m2.length / 2),
-      subMatriz(m2, m2.length / 2, m2.length / 2, m2.length / 2)
-    ))
+    if (m1.length == 1) Vector(Vector(m1(0)(0) * m2(0)(0)))
+    else {
+      // Se usa la abstracción parallel para crear un par de vectores paralelos con las submatrices de la primera y la segunda matriz
+      val (m1SubMatrices,m2SubMatrices) = parallel(Vector(
+        subMatriz(m1, 0, 0, m1.length / 2),
+        subMatriz(m1, 0, m1.length / 2, m1.length / 2),
+        subMatriz(m1, m1.length / 2, 0, m1.length / 2),
+        subMatriz(m1, m1.length / 2, m1.length / 2, m1.length / 2)
+      ),Vector(
+        subMatriz(m2, 0, 0, m2.length / 2),
+        subMatriz(m2, 0, m2.length / 2, m2.length / 2),
+        subMatriz(m2, m2.length / 2, 0, m2.length / 2),
+        subMatriz(m2, m2.length / 2, m2.length / 2, m2.length / 2)
+      ))
 
-    // Se usa la abstracción parallel para crear un vector paralelo con las diferencias y las sumas de las submatrices
-    val s1 = task { restaMatriz(m2SubMatrices(1), m2SubMatrices(3)) }
-    val s2 = task { sumMatriz(m1SubMatrices(0), m1SubMatrices(1)) }
-    val s3 = task { sumMatriz(m1SubMatrices(2), m1SubMatrices(3)) }
-    val s4 = task { restaMatriz(m2SubMatrices(2), m2SubMatrices(0)) }
-    val s5 = task { sumMatriz(m1SubMatrices(0), m1SubMatrices(3)) }
-    val s6 = task { sumMatriz(m2SubMatrices(0), m2SubMatrices(3)) }
-    val s7 = task { restaMatriz(m1SubMatrices(1), m1SubMatrices(3)) }
-    val s8 = task { sumMatriz(m2SubMatrices(2), m2SubMatrices(3)) }
-    val s9 = task { restaMatriz(m1SubMatrices(0), m1SubMatrices(2)) }
-    val s10 = task { sumMatriz(m2SubMatrices(0), m2SubMatrices(1)) }
+      // Se usa la abstracción parallel para crear un vector paralelo con las diferencias y las sumas de las submatrices
+      val s1 = task { restaMatriz(m2SubMatrices(1), m2SubMatrices(3)) }
+      val s2 = task { sumMatriz(m1SubMatrices(0), m1SubMatrices(1)) }
+      val s3 = task { sumMatriz(m1SubMatrices(2), m1SubMatrices(3)) }
+      val s4 = task { restaMatriz(m2SubMatrices(2), m2SubMatrices(0)) }
+      val s5 = task { sumMatriz(m1SubMatrices(0), m1SubMatrices(3)) }
+      val s6 = task { sumMatriz(m2SubMatrices(0), m2SubMatrices(3)) }
+      val s7 = task { restaMatriz(m1SubMatrices(1), m1SubMatrices(3)) }
+      val s8 = task { sumMatriz(m2SubMatrices(2), m2SubMatrices(3)) }
+      val s9 = task { restaMatriz(m1SubMatrices(0), m1SubMatrices(2)) }
+      val s10 = task { sumMatriz(m2SubMatrices(0), m2SubMatrices(1)) }
 
-    // Se usa el método task para crear las tareas que calculan las multiplicaciones de las submatrices
-    val p1 = task { multStrass(m1SubMatrices(0), s1.join) }
-    val p2 = task { multStrass(s2.join, m2SubMatrices(3)) }
-    val p3 = task { multStrass(s3.join, m2SubMatrices(0)) }
-    val p4 = task { multStrass(m1SubMatrices(3), s4.join) }
-    val p5 = task { multStrass(s5.join, s6.join) }
-    val p6 = task { multStrass(s7.join, s8.join) }
-    val p7 = task { multStrass(s9.join, s10.join) }
+      // Se usa el método task para crear las tareas que calculan las multiplicaciones de las submatrices
+      val p1 = task { multStrass(m1SubMatrices(0), s1.join) }
+      val p2 = task { multStrass(s2.join, m2SubMatrices(3)) }
+      val p3 = task { multStrass(s3.join, m2SubMatrices(0)) }
+      val p4 = task { multStrass(m1SubMatrices(3), s4.join) }
+      val p5 = task { multStrass(s5.join, s6.join) }
+      val p6 = task { multStrass(s7.join, s8.join) }
+      val p7 = task { multStrass(s9.join, s10.join) }
 
-    // Se usa el método join para obtener el resultado de las tareas cuando se vayan a usar
-    val c1 = sumMatriz(sumMatriz(p5.join, p4.join), restaMatriz(p6.join, p2.join))
-    val c2 = sumMatriz(p1.join, p2.join)
-    val c3 = sumMatriz(p3.join, p4.join)
-    val c4 = restaMatriz(sumMatriz(p5.join, p1.join), sumMatriz(p3.join, p7.join))
+      // Se usa el método join para obtener el resultado de las tareas cuando se vayan a usar
+      val c1 = sumMatriz(sumMatriz(p5.join, p4.join), restaMatriz(p6.join, p2.join))
+      val c2 = sumMatriz(p1.join, p2.join)
+      val c3 = sumMatriz(p3.join, p4.join)
+      val c4 = restaMatriz(sumMatriz(p5.join, p1.join), sumMatriz(p3.join, p7.join))
 
-    // Se unen los cuatro bloques para formar la matriz producto
-    val sumavector1y2 = Vector.tabulate(c1.size)(y =>
+      // Se unen los cuatro bloques para formar la matriz producto
+      val sumavector1y2 = Vector.tabulate(c1.size)(y =>
         (c1(y)++c2(y))
-      )
+        )
       val sumavector3y4 = Vector.tabulate(c3.size)(y =>
         (c3(y)++c4(y))
       )
