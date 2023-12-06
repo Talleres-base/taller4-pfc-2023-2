@@ -38,7 +38,7 @@ class TestTaller4 extends AnyFunSuite {
     test("Prueba de la multiplicación de matrices recursiva secuencial vs recursiva paralelo") { 
         println("Comparación de algoritmos")
         val prueba = for {
-            i <- 1 to 7
+            i <- 1 to 10
             m1 = obj.matrizAlAzar(math.pow(2, i).toInt, 2)
             m2 = obj.matrizAlAzar(math.pow(2, i).toInt, 2)
         } yield (obj3.compararAlgoritmos(obj.multMatrizRec, obj2.multMatrizRecParallel)(m1, m2), math.pow(2, i).toInt)
@@ -48,7 +48,7 @@ class TestTaller4 extends AnyFunSuite {
     test("Prueba de la multiplicación de matrices strassen secuencial vs strassen paralelo") { 
         println("Comparación de algoritmos")
         val prueba = for {
-            i <- 1 to 7
+            i <- 1 to 10
             m1 = obj.matrizAlAzar(math.pow(2, i).toInt, 2)
             m2 = obj.matrizAlAzar(math.pow(2, i).toInt, 2)
         } yield (obj3.compararAlgoritmos(obj.strassen, obj2.strassenParallel)(m1, m2), math.pow(2, i).toInt)
@@ -59,11 +59,39 @@ class TestTaller4 extends AnyFunSuite {
     test("Prueba de la multiplicación de matrices secuencial vs paraleloV2") { 
         println("Comparación de algoritmos")
         val prueba = for {
-            i <- 1 to 7
+            i <- 1 to 10
             m1 = obj.matrizAlAzar(math.pow(2, i).toInt, 2)
             m2 = obj.matrizAlAzar(math.pow(2, i).toInt, 2)
         } yield (obj3.compararAlgoritmos(obj.multMatriz, obj2.multMatrizParV2)(m1, m2), math.pow(2, i).toInt)
         println(prueba)
+    }
+
+
+    test("Prueba con todos los algoritmos con un tamaño especifico de matriz"){
+        println("Comparación de algoritmos con un tamaño especifico de matriz  ")
+        for (i <- 1 to 7) {
+            println(obj3.desempenoDeFunciones(math.pow(2, i).toInt))
+        }
+    }
+    test("Prueba del productos punto secuencial vs producto punto con paralelismo de datos"){
+        println("Comparación de productos punto")
+        for (i <- 1 to 7) {
+            println(obj3.desempenoProdPunto(math.pow(10, i).toInt, i))
+        }
+    }
+
+    test("Prueba de todos los algorimos secuenciales"){
+        println("Comparacion de algoritmos secuenciales")
+        for(i <- 1  to 7){
+            println(obj3.desempenoDeFuncionesSecuenciales(math.pow(2,i).toInt))
+        }
+    }
+
+    test("Prueba de todos los algorimos paralelos"){
+        println("Comparacion de algoritmos paralelos")
+        for(i <- 1  to 7){
+            println(obj3.desempenoDeFuncionesParalelas(math.pow(2,i).toInt))
+        }
     }
 }
 

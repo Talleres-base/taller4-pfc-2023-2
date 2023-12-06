@@ -73,13 +73,13 @@ class implAlgoritmosParallel{
     def auxMultMatrizRecParallel (m1:Matriz , m2: Matriz,auxMatriz: Matriz, tamanio : Int,posicionQuieta:Int,posicionCambiante:Int,auxVector: Vector[Int] ) : Matriz ={
      if (auxMatriz.length == m1.length ) {auxMatriz}
      else{
-      val vectorSuma = (Vector.tabulate(tamanio)((i) => obj.prodPunto(obj.subMatriz(m1,posicionQuieta,i,m1.length)(0), obj.transpuesta(obj.subMatriz(m2,i,posicionCambiante,m2.length))(0))))
-      val nuevoVector= modificarVector(vectorSuma,0,vectorSuma.length,Vector())
+      val vectorSuma = task(Vector.tabulate(tamanio)((i) => obj.prodPunto(obj.subMatriz(m1,posicionQuieta,i,m1.length)(0), obj.transpuesta(obj.subMatriz(m2,i,posicionCambiante,m2.length))(0))))
+      val nuevoVector= modificarVector(vectorSuma.join(),0,vectorSuma.join().length,Vector())
       val aux2 = auxVector ++ auxSumaMatriz(nuevoVector,0,Vector())
       
       if(aux2.length == tamanio){
         val nuevaMatriz = auxMatriz:+aux2
-        task(auxMultMatrizRecParallel(m1,m2,nuevaMatriz,tamanio,posicionQuieta+1,0,Vector())).join()
+        (auxMultMatrizRecParallel(m1,m2,nuevaMatriz,tamanio,posicionQuieta+1,0,Vector()))
 
       }else{
         if (posicionCambiante == tamanio-1) {auxMultMatrizRecParallel(m1,m2,auxMatriz,tamanio,posicionQuieta+1,0,aux2)}
