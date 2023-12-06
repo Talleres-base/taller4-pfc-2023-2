@@ -43,7 +43,6 @@ object Taller4{
 
   def multMatriz(m1: Matriz, m2: Matriz): Matriz = {
     val size = m1.length
-
     Vector.tabulate(size, size) { (i, j) =>
       val fila = m1(i)
       val columna = transpuesta(m2)(j)
@@ -82,7 +81,6 @@ object Taller4{
   def multMatrizRec(m1: Matriz, m2: Matriz): Matriz = {
     if (m1.length == 1) Vector(Vector(m1(0)(0) * m2(0)(0)))
     else {
-      val m2T = m2
       val m1SubMatrices = Vector(
         subMatriz(m1, 0, 0, m1.length / 2),
         subMatriz(m1, 0, m1.length / 2, m1.length / 2),
@@ -91,10 +89,10 @@ object Taller4{
       )
 
       val m2SubMatrices = Vector(
-        subMatriz(m2T, 0, 0, m2.length / 2),
-        subMatriz(m2T, 0, m2.length / 2, m2.length / 2),
-        subMatriz(m2T, m2.length / 2, 0, m2.length / 2),
-        subMatriz(m2T, m2.length / 2, m2.length / 2, m2.length / 2)
+        subMatriz(m2, 0, 0, m2.length / 2),
+        subMatriz(m2, 0, m2.length / 2, m2.length / 2),
+        subMatriz(m2, m2.length / 2, 0, m2.length / 2),
+        subMatriz(m2, m2.length / 2, m2.length / 2, m2.length / 2)
       )
       val vector1  = sumMatriz(
         multMatrizRec(m1SubMatrices(0), m2SubMatrices(0)),
@@ -128,7 +126,6 @@ object Taller4{
   def multMatrizRecPar(m1: Matriz, m2: Matriz): Matriz = {
     if (m1.length == 1) Vector(Vector(m1(0)(0) * m2(0)(0)))
     else {
-      val m2T = m2
       // Se crean las submatrices de la primera matriz
       val (m1SubMatrices,m2SubMatrices) = parallel(Vector(
         subMatriz(m1, 0, 0, m1.length / 2),
@@ -136,10 +133,10 @@ object Taller4{
         subMatriz(m1, m1.length / 2, 0, m1.length / 2),
         subMatriz(m1, m1.length / 2, m1.length / 2, m1.length / 2)
       ),Vector(
-        subMatriz(m2T, 0, 0, m2.length / 2),
-        subMatriz(m2T, 0, m2.length / 2, m2.length / 2),
-        subMatriz(m2T, m2.length / 2, 0, m2.length / 2),
-        subMatriz(m2T, m2.length / 2, m2.length / 2, m2.length / 2)
+        subMatriz(m2, 0, 0, m2.length / 2),
+        subMatriz(m2, 0, m2.length / 2, m2.length / 2),
+        subMatriz(m2, m2.length / 2, 0, m2.length / 2),
+        subMatriz(m2, m2.length / 2, m2.length / 2, m2.length / 2)
       ))
 
       // Se calculan los cuatro bloques de la matriz producto
@@ -197,6 +194,7 @@ object Taller4{
       val m2_2 = subMatriz(m2, 0, m2.length / 2, m2.length / 2)
       val m2_3 = subMatriz(m2, m2.length / 2, 0, m2.length / 2)
       val m2_4 = subMatriz(m2, m2.length / 2, m2.length / 2, m2.length / 2)
+      
       val s1 = restaMatriz(m2_2, m2_4)
       val s2 = sumMatriz(m1_1, m1_2)
       val s3 = sumMatriz(m1_3, m1_4)
@@ -307,50 +305,24 @@ object Taller4{
     println(saludo())
     println(" pruebas multMatriz")
     val resultados = for{
-      i <- 1 to 10
+      i <- 1 to 8
       m1=matrizAlAzar(math.pow(2,i).toInt,2)
       m2=matrizAlAzar(math.pow(2,i).toInt,2)
     } yield (compararAlgoritmos(multMatriz,multMatrizPar)(m1,m2),math.pow(2,i).toInt)
     resultados.foreach(println)
     println(" pruebas multMatrizRec")
     val resultados1 = for{
-      i <- 1 to 10
+      i <- 1 to 8
       m1=matrizAlAzar(math.pow(2,i).toInt,2)
       m2=matrizAlAzar(math.pow(2,i).toInt,2)
     } yield (compararAlgoritmos(multMatrizRec,multMatrizRecPar)(m1,m2),math.pow(2,i).toInt)
     resultados1.foreach(println)
     println(" pruebas multStrass")
     val resultados2 = for{
-      i <- 1 to 10
+      i <- 1 to 8
       m1=matrizAlAzar(math.pow(2,i).toInt,2)
       m2=matrizAlAzar(math.pow(2,i).toInt,2)
     } yield (compararAlgoritmos(multStrass,multStrassPar)(m1,m2),math.pow(2,i).toInt)
     resultados2.foreach(println)
-    /*
-    println(" pruebas 8x8")
-    val m1 = matrizAlAzar(8,10)
-    val m2 = matrizAlAzar(8,10)
-    println(compararAlgoritmos(multMatriz,multMatrizPar)(m1,m2))
-    println(compararAlgoritmos(multMatrizRec,multMatrizRecPar)(m1,m2))
-    println(compararAlgoritmos(multStrass,multStrassPar)(m1,m2))
-    println(" pruebas 32x32")
-    val m3 = matrizAlAzar(32,10)
-    val m4 = matrizAlAzar(32,10)
-    println(compararAlgoritmos(multMatriz,multMatrizPar)(m3,m4))
-    println(compararAlgoritmos(multMatrizRec,multMatrizRecPar)(m3,m4))
-    println(compararAlgoritmos(multStrass,multStrassPar)(m3,m4))
-    println(" pruebas 128x128")
-    val m5 = matrizAlAzar(128,10)
-    val m6 = matrizAlAzar(128,10)
-    println(compararAlgoritmos(multMatriz,multMatrizPar)(m5,m6))
-    println(compararAlgoritmos(multMatrizRec,multMatrizRecPar)(m5,m6))
-    println(compararAlgoritmos(multStrass,multStrassPar)(m5,m6))
-    println(" pruebas 256x256")
-    val m7 = matrizAlAzar(256,10)
-    val m8 = matrizAlAzar(256,10)
-    println(compararAlgoritmos(multMatriz,multMatrizPar)(m7,m8))
-    println(compararAlgoritmos(multMatrizRec,multMatrizRecPar)(m7,m8))
-    println(compararAlgoritmos(multStrass,multStrassPar)(m7,m8))
-    */
   }
 }
