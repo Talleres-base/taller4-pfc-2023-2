@@ -21,7 +21,7 @@ class testBuscaCadenas extends AnyFunSuite {
     for (tamanioCadena <- 2 to 8) {
       val cadenaObjetivo = generarCadenaAleatoria(tamanioCadena, alfabeto)
       val buscadorCadena1 = new BuscadorCadenaSecuencial(cadenaObjetivo, alfabeto)
-      val buscadorCadenasParalelo = new BuscadorCadenaParalelo(cadenaObjetivo,alfabeto)
+      val buscadorCadenasParalelo = new BuscadorCadenaParalelo2(cadenaObjetivo,alfabeto)
       println(s"Pruebas con cadena de tamaño $tamanioCadena para hallar $cadenaObjetivo")
 
       // Caso de prueba 1: ingenua

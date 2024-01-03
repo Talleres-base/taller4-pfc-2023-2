@@ -53,7 +53,7 @@ object Taller4 {
     for (tamanioCadena <- 2 to 18) {
       val cadenaObjetivo = generarCadenaAleatoria(tamanioCadena, alfabeto)
       val buscarCadenaSec = new BuscadorCadenaSecuencial(cadenaObjetivo, alfabeto)
-      val buscarCadenaPar = new BuscadorCadenaParalelo2(cadenaObjetivo, alfabeto)
+      val buscarCadenaPar = new BuscadorCadenaParalelo(cadenaObjetivo, alfabeto)
 
       println(s"Pruebas con cadena de tamaño $tamanioCadena")
 
@@ -68,6 +68,7 @@ object Taller4 {
       println("Pruebas PRC_turbo vs. PRC_turboPar")
       val resultadosTurbo = compararAlgoritmos(buscarCadenaSec.turbo(), buscarCadenaPar.turbo())
       println(resultadosTurbo)
+
 
       println("Pruebas PRC_turbo_mejorada vs. PRC_turbo_mejoradaPar")
       val resultadosTurboMejorada = compararAlgoritmos(buscarCadenaSec.turboMejorada(), buscarCadenaPar.turboMejorada())
