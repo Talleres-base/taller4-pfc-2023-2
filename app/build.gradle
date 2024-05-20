@@ -14,6 +14,23 @@ plugins {
     id("com.github.alisiikh.scalastyle") version "3.5.0"
 
 }
+//Aumentar la memoria de jvm a 1GB para las tareas build, run y test 
+tasks.withType(ScalaCompile) {
+    scalaCompileOptions.additionalParameters = ["-J-Xmx1g"]
+}
+
+tasks.withType(JavaExec) {
+    jvmArgs = ["-Xmx1g"]
+}
+
+tasks.withType(ScalaCompile) {
+    scalaCompileOptions.additionalParameters += ["-J-Xss8m"]
+}
+
+tasks.withType(JavaExec) {
+    jvmArgs += ["-Xss8m"]
+}
+
 
 repositories {
     // Use Maven Central for resolving dependencies.

@@ -11,7 +11,7 @@ import org.scalameter.Warmer
 
 object Taller4{
 
-  def saludo() = "Taller 4 2023-II"
+  def saludo() = "Taller 4"
 
   def main(args: Array[String]): Unit = {
     println(saludo())

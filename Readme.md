@@ -1,3 +1,3 @@
-# Taller 4  - Fundamentos de programación funcional y concurrente
+# Repositorio base
 
-Implementción de multiplicación concurrente de matrices
+Este repositorio tiene las configuraciones y librerías necesarias para trabajar concurrencia
